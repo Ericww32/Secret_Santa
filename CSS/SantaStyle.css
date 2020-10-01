@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    z-index: 0;
+}
+
+#column {
+    color: aliceblue;
+    padding: 20px;
+    border: 4px solid gold;
+    z-index: 3;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.box1 {
+    color: whitesmoke;
+    width: 30%;
+    padding: 10px;
+    float: left;
+    height: 10%;
+    z-index: 3;
+}
+
+.box2 {
+    color: black;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 15%;
+}
+
+.titleImg {
+    width: 64%;
+    height: 64%;
+    float: right;
+}
+
+.img1 {
+    width: 45%;
+    height: 45%;
+    float: left;
+}
+
+.img2 {
+    width: 45%;
+    height: 45%;
+    float: right;
+}

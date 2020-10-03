@@ -2,9 +2,9 @@ let adultDisplay = document.getElementById("adults");
 let kidDisplay = document.getElementById("kids");
 let babiesDisplay = document.getElementById("babies");
 
-let adults = ["Brenda", "David", "Jackie", "Sam", "Annette", "Donnie", "Joe", "Cindy"];
-let kids = ["Morgan", "Erin", "Imran", "Eric", "Melody", "Jeff", "Mikayla"];
-let babies = ["Henry", "Aiden", "Ayla", "Izzy", "Lilly", "Mikey"];
+const adults = ["Brenda", "David", "Jackie", "Sam", "Annette", "Donnie", "Joe", "Cindy"];
+const kids = ["Morgan", "Erin", "Imran", "Eric", "Melody", "Jeff", "Mikayla"];
+const babies = ["Henry", "Aiden", "Ayla", "Izzy", "Lilly", "Mikey"];
 
 let adultsAssignedList = [];
 let kidsAssignedList = [];

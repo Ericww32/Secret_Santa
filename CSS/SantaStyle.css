@@ -1,57 +1,133 @@
-* {
-    box-sizing: border-box;
+@font-face {
+   font-family: CandyCane;
+   src: url("../Assets/Fonts/CandyCane.ttf");
 }
 
-body {
-    background-color: lightblue;
-    z-index: 0;
+@font-face {
+   font-family: ChristmasMountainFont;
+   src: url("../Assets/Fonts/MountainsofChristmas.ttf");
 }
 
-#column {
-    color: aliceblue;
-    padding: 20px;
-    border: 4px solid gold;
-    z-index: 3;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.box1 {
-    color: whitesmoke;
-    width: 30%;
+.final-count-down {
+    color: red;
+    text-shadow: 1px 0px white;
+    font-family: CandyCane;
+    background-color: green;
+    border: 4px solid white;
+    border-radius: 15px;
     padding: 10px;
-    float: left;
-    height: 10%;
-    z-index: 3;
 }
 
-.box2 {
-    color: black;
-    float: left;
-    width: 20%;
+@media (min-width: 576px) {
+  .final-count-down {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .final-count-down {
+    font-size: 42px;
+  }
+}
+@media (min-width: 992px) {
+  .final-count-down {
+    font-size: 52px;
+  }
+}
+@media (min-width: 1200px) {
+  .final-count-down {
+    font-size: 69px;
+  }
+}
+
+.count-down-timer {
+    background-color: green;
+    text-shadow: 1px 0px white;
+    border: 4px solid white;
+    border-radius: 15px;
     padding: 10px;
-    height: 15%;
 }
 
-.titleImg {
-    width: 64%;
-    height: 64%;
-    float: right;
+.text-jolly {
+    color: white;
+    font-family: ChristmasMountainFont;
 }
 
-.img1 {
-    width: 45%;
-    height: 45%;
+.text-holly {
+    color: red;
+    font-family: ChristmasMountainFont;
+}
+
+.text-copyright {
+    color: red;
+    background-color: gold;
+    text-shadow: 1px 1px;
+    font-family: ChristmasMountainFont;
+    font-size: 23px;
+}
+
+.text-rules {
+    color: red;
+    font-family: ChristmasMountainFont;
+    font-size: 23px;
+}
+
+.holly-column-title {
+    color: white;
+    font-family: ChristmasMountainFont;
+    font-size: 32px;
+}
+
+.holly-column-text {
+    color: white;
+    font-family: ChristmasMountainFont;
+    font-size: 23px;
+}
+
+.holly {
+    background-color: red;
+}
+
+.jolly {
+    background-color: #1abc9c;
+}
+
+.christmasHeader{
+	background-color: rgba(255, 255, 255, 0.80);
+}
+
+.christmasBackground{
+	background-color: #b3ccff;
+    background-image: url("../Assets/img/christmas.png");
+    color: red;
+    font-family: cursive;
+}
+
+#pButton {
+    height: 32px;
+    width: 32px;
     float: left;
 }
 
-.img2 {
-    width: 45%;
-    height: 45%;
-    float: right;
+.btn-holly {
+  display: inline-block;
+  font-family: ChristmasMountainFont;
+  color: red;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 0.125rem solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.5rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-holly:hover {
+  color: #1abc9c;
+  text-decoration: none;
 }

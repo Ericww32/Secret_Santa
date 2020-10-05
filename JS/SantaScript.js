@@ -4,15 +4,15 @@ let babiesDisplay = document.getElementById("babies");
 
 const adults = ["Brenda", "David", "Jackie", "Sam", "Annette", "Donnie", "Joe", "Cindy"];
 const kids = ["Morgan", "Erin", "Imran", "Eric", "Melody", "Jeff", "Mikayla"];
-const babies = ["Henry", "Aiden", "Ayla", "Izzy", "Lilly", "Mikey"];
+const babies = ["Henry", "Baby Esat", "Ayla", "Izzy", "Lilly", "Mikey", "Aiden"];
 
-let adultsAssignedList = [];
-let kidsAssignedList = [];
-let babiesAssignedList = [];
+let adultsAssignedList = ["Jackie", "Joe", "Cindy", "David", "Sam", "Brenda", "Donnie", "Annette"];
+let kidsAssignedList = ["Melody", "Eric", "Morgan", "Mikayla", "Erin", "Imran", "Jeff"];
+let babiesAssignedList = ["Lilly", "Izzy", "Mikey", "Baby Esat", "Aiden", "Ayla", "Henry"];
 
-shuffleAdults();
-shuffleKids();
-shuffleBabies();
+// shuffleAdults();
+// shuffleKids();
+// shuffleBabies();
 
 function shuffleAdults() {
     adultsAssignedList = [];

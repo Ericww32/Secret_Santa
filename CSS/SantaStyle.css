@@ -103,9 +103,9 @@
 }
 
 #pButton {
-    height: 32px;
-    width: 32px;
-    float: left;
+    height: 32px !important;
+    width: 32px !important;
+    float: left !important;
 }
 
 .btn-holly {
@@ -127,7 +127,31 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.btn-jolly {
+  display: inline-block;
+  font-family: ChristmasMountainFont;
+  color: #1abc9c;
+  background-color: gold;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 0.125rem solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.5rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
 .btn-holly:hover {
   color: #1abc9c;
+  text-decoration: none;
+}
+
+.btn-holly:jolly {
+  color: red;
   text-decoration: none;
 }

@@ -165,7 +165,7 @@ displayCalculated(babies, babiesAssignedList, babiesDisplay);
 function displayCalculated(namesList, assignedList, columnDisplay) {
     let html = '<ul>';
     for (let i = 0; i < namesList.length; i++) {
-        html += '<li>' + namesList[i] + ' ➡ ' + assignedList[i] + '</li>';
+        html += '<li>' + namesList[i] + ' ➡ ' + assignedList[i] + '<br /><button>'+assignedList[i]+'\'s wishlist</button></li>';
     }
     html += '</ul>';
     columnDisplay.innerHTML = html;

@@ -17,7 +17,7 @@ var adultsJSON = '{ ' +
 
 var kidsJSON = '{ ' +
     '"person": [' +
-        '{"name": "Eric", "assigned": "Mikayla", "ignore": "", "link": "#"},' +
+        '{"name": "Eric", "assigned": "Mikayla", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2TB6LH8QBNIRE?ref_=wl_share"},' +
         '{"name": "Erin", "assigned": "Eric", "ignore": "", "link": "#"},' +
         '{"name": "Imran", "assigned": "Morgan", "ignore": "", "link": "#"},' +
         '{"name": "Jeff", "assigned": "Imran", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +

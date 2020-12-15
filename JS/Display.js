@@ -11,7 +11,7 @@ var adultsJSON = '{ ' +
         '{"name": "Annette", "assigned": "Sam", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
         '{"name": "Donnie", "assigned": "Brenda", "ignore": "", "link": ""},' +
         '{"name": "Joe", "assigned": "Donnie", "ignore": "", "link": ""},' +
-        '{"name": "Cindy", "assigned": "Annette", "ignore": "", "link": ""}' +
+        '{"name": "Cindy", "assigned": "Annette", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"}' +
     ']' +
 '}';
 

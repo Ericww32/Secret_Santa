@@ -4,38 +4,37 @@ let babiesDisplay = document.getElementById("babies");
 
 var adultsJSON = '{ ' +
     '"person": [' +
-        '{"name": "Brenda", "assigned": "Jackie", "ignore": "", "link": ""},' +
-        '{"name": "David", "assigned": "Joe", "ignore": "", "link": ""},' +
-        '{"name": "Jackie", "assigned": "Cindy", "ignore": "", "link": ""},' +
-        '{"name": "Sam", "assigned": "David", "ignore": "", "link": ""},' +
-        '{"name": "Annette", "assigned": "Sam", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
-        '{"name": "Donnie", "assigned": "Brenda", "ignore": "", "link": ""},' +
-        '{"name": "Joe", "assigned": "Donnie", "ignore": "", "link": ""},' +
-        '{"name": "Cindy", "assigned": "Annette", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"}' +
+        '{"name": "Brenda", "assigned": "Cindy", "ignore": "", "link": ""},' +
+        '{"name": "David", "assigned": "Jackie", "ignore": "", "link": ""},' +
+        '{"name": "Jackie", "assigned": "Annette", "ignore": "", "link": ""},' +
+        '{"name": "Sam", "assigned": "Joe", "ignore": "", "link": ""},' +
+        '{"name": "Annette", "assigned": "David", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
+        '{"name": "Joe", "assigned": "Sam", "ignore": "", "link": ""},' +
+        '{"name": "Cindy", "assigned": "Brenda", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"}' +
     ']' +
 '}';
 
 var kidsJSON = '{ ' +
     '"person": [' +
-        '{"name": "Eric", "assigned": "Mikayla", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2TB6LH8QBNIRE?ref_=wl_share"},' +
-        '{"name": "Erin", "assigned": "Eric", "ignore": "", "link": ""},' +
-        '{"name": "Imran", "assigned": "Morgan", "ignore": "", "link": ""},' +
-        '{"name": "Jeff", "assigned": "Imran", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +
-        '{"name": "Melody", "assigned": "Erin", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"},' +
-        '{"name": "Mikayla", "assigned": "Jeff", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
-        '{"name": "Morgan", "assigned": "Melody", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"}' +
+        '{"name": "Eric", "assigned": "Morgan", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2TB6LH8QBNIRE?ref_=wl_share"},' +
+        '{"name": "Erin", "assigned": "Jeff", "ignore": "", "link": ""},' +
+        '{"name": "Imran", "assigned": "Mikayla", "ignore": "", "link": ""},' +
+        '{"name": "Jeff", "assigned": "Erin", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +
+        '{"name": "Melody", "assigned": "Imran", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"},' +
+        '{"name": "Mikayla", "assigned": "Melody", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
+        '{"name": "Morgan", "assigned": "Eric", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"}' +
     ']' +
 '}';
 
 var babiesJSON = '{ ' +
     '"person": [' +
-        '{"name": "Aiden", "assigned": "Henry", "ignore": "", "link": ""},' +
-        '{"name": "Ayla", "assigned": "Mikey", "ignore": "", "link": ""},' +
+        '{"name": "Aiden", "assigned": "Lilly", "ignore": "", "link": ""},' +
+        '{"name": "Ayla", "assigned": "Henry", "ignore": "", "link": ""},' +
         '{"name": "Ashlan", "assigned": "Izzy", "ignore": "", "link": ""},' +
-        '{"name": "Henry", "assigned": "Lilly", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
+        '{"name": "Henry", "assigned": "Mikey", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
         '{"name": "Izzy", "assigned": "Ashlan", "ignore": "", "link": ""},' +
-        '{"name": "Lilly", "assigned": "Aiden", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/3N3JBCVC6P85?ref=cm_sw_sm_r_wl_ip_UbTqwFHjZOtmH"},' +
-        '{"name": "Mikey", "assigned": "Ayla", "ignore": "", "link": ""}' +
+        '{"name": "Lilly", "assigned": "Ayla", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/3N3JBCVC6P85?ref=cm_sw_sm_r_wl_ip_UbTqwFHjZOtmH"},' +
+        '{"name": "Mikey", "assigned": "Aiden", "ignore": "", "link": ""}' +
     ']' +
 '}';
 

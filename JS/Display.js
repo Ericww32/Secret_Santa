@@ -6,7 +6,7 @@ var adultsJSON = '{ ' +
     '"person": [' +
         '{"name": "Brenda", "assigned": "Cindy", "ignore": "", "link": ""},' +
         '{"name": "David", "assigned": "Jackie", "ignore": "", "link": ""},' +
-        '{"name": "Jackie", "assigned": "Annette", "ignore": "", "link": ""},' +
+        '{"name": "Jackie", "assigned": "Annette", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"},' +
         '{"name": "Sam", "assigned": "Joe", "ignore": "", "link": ""},' +
         '{"name": "Annette", "assigned": "David", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
         '{"name": "Joe", "assigned": "Sam", "ignore": "", "link": ""},' +

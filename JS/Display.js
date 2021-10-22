@@ -32,7 +32,7 @@ var babiesJSON = '{ ' +
         '{"name": "Ayla", "assigned": "Henry", "ignore": "", "link": ""},' +
         '{"name": "Aslan", "assigned": "Izzy", "ignore": "", "link": ""},' +
         '{"name": "Henry", "assigned": "Mikey", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
-        '{"name": "Izzy", "assigned": "Ashlan", "ignore": "", "link": ""},' +
+        '{"name": "Izzy", "assigned": "Aslan", "ignore": "", "link": ""},' +
         '{"name": "Lilly", "assigned": "Ayla", "ignore": "", "link": "https://www.amazon.com/hz/wishlist/ls/3N3JBCVC6P85?ref=cm_sw_sm_r_wl_ip_UbTqwFHjZOtmH"},' +
         '{"name": "Mikey", "assigned": "Aiden", "ignore": "", "link": ""}' +
     ']' +

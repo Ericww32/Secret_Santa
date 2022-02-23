@@ -4,32 +4,37 @@ let kidsDisplay = document.getElementById("kids");
 let babiesDisplay = document.getElementById("babies");
 
 // Pull in the JSON data
-fetch("../JSON/adults.json")
+fetch("JSON/adults.json")
     .then(function(response) {
         const adultsJSON = response;
-        console.log("Adults JSON: " + adultsJSON);
     })
     .catch(function(err) {
-        console.log("Adults Faild to load JSON data...");
+        console.log("Adults failed to load JSON data...");
     });
 
-fetch("../JSON/kids.json")
+fetch("JSON/kids.json")
     .then(function(response) {
         const kidsJSON = response;
-        console.log("Kids JSON: " + kidsJSON);
     })
     .catch(function(err) {
-        console.log("Adults Faild to load JSON data...");
+        console.log("Kids failed to load JSON data...");
     });
 
-fetch("../JSON/babies.json")
+fetch("JSON/babies.json")
     .then(function(response) {
         const babiesJSON = response;
-        console.log("Babies JSON: " + babiesJSON);
     })
     .catch(function(err) {
-        console.log("Adults Faild to load JSON data...");
+        console.log("Babies failed to load JSON data...");
     });
+
+const adultsJSON = require("../JSON/adults.json");
+const kidsJSON = require("../JSON/kids.json");
+const babiesJSON = require("../JSON/babies.json");
+
+console.log("Adults JSON: " + adultsJSON);
+console.log("Kids JSON: " + kidsJSON);
+console.log("Babies JSON: " + babiesJSON);
 
 // var adultsJSON = '{ ' +
 //     '"person": [' +
@@ -98,13 +103,11 @@ function displayCalculated(obj, columnDisplay) {
 // This function gets the link from the person that is assigned
 function getLink(obj, assigned) {
     var result;
-    console.log(obj);
-    console.log(assigned);
+
     for (var i = 0; i < obj.person.length; i++) {
         // look for the entry with a matching `name` value
         if (obj.person[i].name == assigned) {
             result = obj.person[i].link;
-            console.log(result);
             break;
         }
     }

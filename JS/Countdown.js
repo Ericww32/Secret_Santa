@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var i = 2021;
+var i = 2022;
 var countDownDate = new Date("Dec 25, " + i + " 00:00:00").getTime();
 
 // Update the count down every 1 second
@@ -24,7 +24,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("theFinalCountdown").innerHTML = "RESETTING!";
+    document.getElementById("theFinalCountdown").innerHTML = "RESET";
     i++;
   }
 }, 1000);

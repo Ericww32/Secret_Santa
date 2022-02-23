@@ -1,11 +1,11 @@
 @font-face {
-   font-family: CandyCane;
-   src: url("../Assets/Fonts/CandyCane.ttf");
+    font-family: CandyCane;
+    src: url("../Assets/Fonts/CandyCane.ttf");
 }
 
 @font-face {
-   font-family: ChristmasMountainFont;
-   src: url("../Assets/Fonts/MountainsofChristmas.ttf");
+    font-family: ChristmasMountainFont;
+    src: url("../Assets/Fonts/MountainsofChristmas.ttf");
 }
 
 .final-count-down {
@@ -16,27 +16,6 @@
     border: 4px solid white;
     border-radius: 15px;
     padding: 10px;
-}
-
-@media (min-width: 576px) {
-  .final-count-down {
-    font-size: 32px;
-  }
-}
-@media (min-width: 768px) {
-  .final-count-down {
-    font-size: 42px;
-  }
-}
-@media (min-width: 992px) {
-  .final-count-down {
-    font-size: 52px;
-  }
-}
-@media (min-width: 1200px) {
-  .final-count-down {
-    font-size: 69px;
-  }
 }
 
 .count-down-timer {
@@ -62,13 +41,13 @@
     background-color: gold;
     text-shadow: 1px 1px;
     font-family: ChristmasMountainFont;
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .text-rules {
     color: red;
     font-family: ChristmasMountainFont;
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .holly-column-title {
@@ -80,7 +59,7 @@
 .holly-column-text {
     color: white;
     font-family: ChristmasMountainFont;
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .holly {
@@ -88,15 +67,15 @@
 }
 
 .jolly {
-    background-color: #1abc9c;
+    background-color: green;
 }
 
-.christmasHeader{
-	background-color: rgba(255, 255, 255, 0.80);
+.christmasHeader {
+    background-color: rgba(255, 255, 255, 0.80);
 }
 
-.christmasBackground{
-	background-color: #b3ccff;
+.christmasBackground {
+    background-color: #b3ccff;
     background-image: url("../Assets/img/christmas.png");
     color: red;
     font-family: cursive;
@@ -109,68 +88,97 @@
 }
 
 .btn-holly {
-  display: inline-block;
-  font-family: ChristmasMountainFont;
-  color: red;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-color: transparent;
-  border: 0.125rem solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.5rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: inline-block;
+    font-family: ChristmasMountainFont;
+    color: red;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0.125rem solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-jolly {
-  display: inline-block;
-  font-family: ChristmasMountainFont;
-  color: #1abc9c;
-  background-color: gold;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  border: 0.125rem solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.5rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: inline-block;
+    font-family: ChristmasMountainFont;
+    color: green;
+    background-color: gold;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.125rem solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-jolly-dead {
-  display: inline-block;
-  font-family: ChristmasMountainFont;
-  color: #fff;
-  background-color: grey;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  border: 0.125rem solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.5rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: inline-block;
+    font-family: ChristmasMountainFont;
+    color: #fff;
+    background-color: grey;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0.125rem solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-holly:hover {
-  color: #1abc9c;
-  text-decoration: none;
+    color: green;
+    text-decoration: none;
 }
 
-.btn-holly:jolly {
-  color: red;
-  text-decoration: none;
+@media (min-width: 576px) {
+    .final-count-down {
+        font-size: 32px;
+    }
+
+    .wordy {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
+
+@media (min-width: 768px) {
+    .final-count-down {
+        font-size: 42px;
+    }
+}
+
+@media (min-width: 992px) {
+    .final-count-down {
+        font-size: 52px;
+    }
+
+    .wordy {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .final-count-down {
+        font-size: 69px;
+    }
 }

@@ -1,73 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Automatically generate a list of names for the secret santa to keep it honest." />
-        <meta name="author" content="Eric Willoughby" />
-        <title>TEST</title>
-        <!-- Favicon-->
-        <link href="./Assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
 
-        <link href="./CSS/styles.css" rel="stylesheet" />
-        <link href="./CSS/SantaStyle.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
+<head>
 
-        <!-- whoGot Section-->
-        <section class="page-section portfolio" id="whoGot">
-            <div class="container">
-                <!-- whoGot Section Heading-->
-                <h2 class="page-section-heading text-holly text-center text-uppercase text-secondary mb-0">Who Got Who???</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- whoGot Grid Items-->
-                <div class="row">
-                    <!-- whoGot Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" style="background-color:green;">
-                            <center>
-                                <h2 class="holly-column-title">Santa's Favorites</h2>
-                                <div class="divider-custom-line" style="color:white;"></div>
-                            </center>
-                            <center>
-                                <p id="adults" class="holly-column-text"></p>
-                            </center>
-                        </div>
-                    </div>
-                    <!-- whoGot Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto text-column" style="background-color:red;">
-                            <center>
-                                <h2 class="holly-column-title">Naughty</h2>
-                                <div class="divider-custom-line" style="color:white;"></div>
-                            </center>
-                            <center>
-                                <p id="kids" class="holly-column-text"></p>
-                            </center>
-                        </div>
-                    </div>
-                    <!-- whoGot Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto text-column" style="background-color:green;">
-                            <center>
-                                <h2 class="holly-column-title">Nice</h2>
-                                <div class="divider-custom-line" style="color:white;"></div>
-                            </center>
-                            <center>
-                                <p id="babies" class="holly-column-text"></p>
-                            </center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <script src="./JS/Display.js"></script>
-    </body>
-</html>
+    <title>Test Secret Santa</title>
+    <link href="./Assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./CSS/styles.css" rel="stylesheet" />
+    <link href="./CSS/SantaStyle.css" rel="stylesheet" />
+
+    <!-- Font Awesome icons (free version) -->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top">
+    <!-- Music play section -->
+    <div class="mx-0 mx-lg-1">
+        <button id="pButton" class="fa fa-play-circle" onclick="play()"></button>
+    </div>
+
+    <script type="text/javascript">
+        const music = new Audio('./Music/VintageChristmas.mp3');
+        const pButton = document.getElementById('pButton'); // id for pause/play button
+
+        //Play and Pause
+        function play() {
+            // start music
+            if (music.paused) {
+                music.play();
+                // remove play and then add pause
+                pButton.classList.remove("fa fa-play-circle");
+                pButton.classList.add("fa fa-pause-circle");
+            } else {
+                // pause music
+                music.pause();
+                // remove pause and then add play
+                pButton.classList.remove("fa fa-pause-circle");
+                pButton.classList.add("fa fa-play-circle");
+            }
+        }
+    </script>
+</body>

@@ -29,10 +29,9 @@ function shuffle(array) {
 }
 
 function assignSanta(obj, array) {
-    // psudo code
     var randomPick = array[randomIndex];
 
-    if (.ignore == randomPick) {
+    if (obj.ignore == randomPick) {
             shuffle(array);
     } else {
         obj.person[i].assigned = randomPick;

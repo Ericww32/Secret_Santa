@@ -7,13 +7,13 @@ function play() {
     if (music.paused) {
         music.play();
         // remove play and then add pause
-        pButton.classList.remove("fa fa-play-circle");
-        pButton.classList.add("fa fa-pause-circle");
+        pButton.classList.remove("video-play-button");
+        pButton.classList.add("video-pause-button");
     } else {
         // pause music
         music.pause();
         // remove pause and then add play
-        pButton.classList.remove("fa fa-pause-circle");
-        pButton.classList.add("fa fa-play-circle");
+        pButton.classList.remove("video-pause-button");
+        pButton.classList.add("video-play-button");
     }
 }

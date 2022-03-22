@@ -23,8 +23,8 @@ var kidsJSON = '{ ' +
     '{"name": "Imran", "assigned": "Jeff", "ignore": ["Erin"], "link": ""},' +
     '{"name": "Jeff", "assigned": "Erin", "ignore": ["Melody", "Eric"], "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +
     '{"name": "Melody", "assigned": "Mikayla", "ignore": ["Jeff", "Eric"], "link": "https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"},' +
-    '{"name": "Mikayla", "assigned": "Melody", "ignore": [""], "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
-    '{"name": "Morgan", "assigned": "Eric", "ignore": [""], "link": "https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"}' +
+    '{"name": "Mikayla", "assigned": "Eric", "ignore": [""], "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
+    '{"name": "Morgan", "assigned": "Melody", "ignore": [""], "link": "https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"}' +
     ']' +
 '}';
 

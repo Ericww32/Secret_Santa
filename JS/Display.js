@@ -30,10 +30,10 @@ var kidsJSON = '{ ' +
 
 var babiesJSON = '{ ' +
     '"person": [' +
-    '{"name": "Aiden", "assigned": "Mikey", "ignore": ["Ayla", "Aslan"], "link": ""},' +
-    '{"name": "Ayla", "assigned": "Izzy", "ignore": ["Aiden", "Aslan"], "link": ""},' +
-    '{"name": "Aslan", "assigned": "Lilly", "ignore": ["Ayla", "Aiden"], "link": ""},' +
-    '{"name": "Henry", "assigned": "Aiden", "ignore": [""], "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
+    '{"name": "Aidan", "assigned": "Mikey", "ignore": ["Ayla", "Aslan"], "link": ""},' +
+    '{"name": "Ayla", "assigned": "Izzy", "ignore": ["Aidan", "Aslan"], "link": ""},' +
+    '{"name": "Aslan", "assigned": "Lilly", "ignore": ["Ayla", "Aidan"], "link": ""},' +
+    '{"name": "Henry", "assigned": "Aidan", "ignore": [""], "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
     '{"name": "Izzy", "assigned": "Ayla", "ignore": ["Lilly", "Mikey"], "link": ""},' +
     '{"name": "Lilly", "assigned": "Henry", "ignore": ["Izzy", "Mikey"], "link": "https://www.amazon.com/hz/wishlist/ls/3N3JBCVC6P85?ref=cm_sw_sm_r_wl_ip_UbTqwFHjZOtmH"},' +
     '{"name": "Mikey", "assigned": "Aslan", "ignore": ["Izzy", "Lilly"], "link": ""}' +

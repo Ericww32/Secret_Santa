@@ -1,0 +1,11 @@
+{
+    "person": [
+        {"name": "Brenda", "assigned": "Sam", "ignore": ["David"], "history": "", "link": ""},
+        {"name": "David", "assigned": "Joe", "ignore": ["Brenda"], "history": "", "link": ""},
+        {"name": "Jackie", "assigned": "Brenda", "ignore": ["Sam"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"},
+        {"name": "Sam", "assigned": "Annette", "ignore": ["Jackie"], "history": "", "link": ""},
+        {"name": "Annette", "assigned": "Cindy", "ignore": ["NULL"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},
+        {"name": "Joe", "assigned": "David", "ignore": ["Cindy"], "history": "", "link": ""},
+        {"name": "Cindy", "assigned": "Jackie", "ignore": ["Joe"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"}
+    ]
+}

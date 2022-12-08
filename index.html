@@ -37,6 +37,7 @@
                     <li class="nav-item mx-0 mx-lg-1 text-holly"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#whoGot">Who Got Who?</a></li>
                     <li class="nav-item mx-0 mx-lg-1 text-holly"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#slideshow">Slideshow</a></li>
                     <li class="nav-item mx-0 mx-lg-1 text-holly"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#famTree">Fam-Tree</a></li>
+                    <li class="nav-item mx-0 mx-lg-1 text-holly"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#shuffleTime">Reshuffle</a></li>
                     <li class="nav-item mx-0 mx-lg-1 text-holly"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item mx-0 mx-lg-1 text-holly"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#rules">Rules</a></li>
                 </ul>
@@ -286,6 +287,60 @@
         </div>
     </section>
 
+    <!-- Reshuffle Section -->
+    <section class="page-section portfolio text-white" id="shuffleTime">
+        <div id="shuffle" class="container">
+            <button onclick="runShuffle()">Shuffle!</button>
+            <!-- whoGot Section Heading -->
+            <h2 class="page-section-heading text-holly text-center text-uppercase text-secondary mb-0">Who Got Who Now?!</h2>
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- whoGot Grid Items -->
+            <div class="row">
+                <!-- whoGot Item 1 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" style="background-color:green;">
+                        <center>
+                            <h2 class="holly-column-title">Santa's Favorites</h2>
+                            <div class="divider-custom-line" style="color:white;"></div>
+                        </center>
+                        <center>
+                            <p id="column_0" class="holly-column-text"></p>
+                        </center>
+                    </div>
+                </div>
+                <!-- whoGot Item 2 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto text-column" style="background-color:red;">
+                        <center>
+                            <h2 class="holly-column-title">Naughty</h2>
+                            <div class="divider-custom-line" style="color:white;"></div>
+                        </center>
+                        <center>
+                            <p id="column_1" class="holly-column-text"></p>
+                        </center>
+                    </div>
+                </div>
+                <!-- whoGot Item 3 -->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto text-column" style="background-color:green;">
+                        <center>
+                            <h2 class="holly-column-title">Nice</h2>
+                            <div class="divider-custom-line" style="color:white;"></div>
+                        </center>
+                        <center>
+                            <p id="column_2" class="holly-column-text"></p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="page-section jolly text-white mb-0" id="about">
         <div class="container">
@@ -361,7 +416,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="./JS/scripts.js"></script>
-    <script src="./JS/SantaScript.js"></script>
+    <!-- <script src="./JS/SantaScript.js"></script> -->
+    <script src="./JS/SantaScript2.js"></script>
     <script src="./JS/Countdown.js"></script>
     <script src="./JS/Audio.js"></script>
     <script src="./JS/Display.js"></script>

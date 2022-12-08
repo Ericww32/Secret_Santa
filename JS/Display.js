@@ -6,7 +6,7 @@ let babiesDisplay = document.getElementById("babies");
 // Pull in the JSON data
 var adultsJSON = '{ ' +
     '"person": [' +
-    '{"name": "Brenda", "assigned": "Sam", "ignore": ["David"], "link": ""},' +
+    '{"name": "Brenda", "assigned": "Sam", "ignore": ["David"], "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
     '{"name": "David", "assigned": "Joe", "ignore": ["Brenda"], "link": ""},' +
     '{"name": "Jackie", "assigned": "Brenda", "ignore": ["Sam"], "link": "https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"},' +
     '{"name": "Sam", "assigned": "Annette", "ignore": ["Jackie"], "link": ""},' +
@@ -35,7 +35,7 @@ var babiesJSON = '{ ' +
     '{"name": "Aslan", "assigned": "Lilly", "ignore": ["Ayla", "Aidan"], "link": ""},' +
     '{"name": "Henry", "assigned": "Aidan", "ignore": [""], "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
     '{"name": "Izzy", "assigned": "Ayla", "ignore": ["Lilly", "Mikey"], "link": ""},' +
-    '{"name": "Lilly", "assigned": "Henry", "ignore": ["Izzy", "Mikey"], "link": "https://www.amazon.com/hz/wishlist/ls/3N3JBCVC6P85?ref=cm_sw_sm_r_wl_ip_UbTqwFHjZOtmH"},' +
+    '{"name": "Lilly", "assigned": "Henry", "ignore": ["Izzy", "Mikey"], "link": "https://www.amazon.com/registries/holiday/2HC3EM405FBX6/guest-view"},' +
     '{"name": "Mikey", "assigned": "Aslan", "ignore": ["Izzy", "Lilly"], "link": ""}' +
     ']' +
 '}';

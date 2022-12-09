@@ -6,22 +6,15 @@ let cYear = currentDate.getFullYear();
 
 let reshuffle = 0;
 
-// Grab the JSON objects and pass it to a variable
-let famJSON = new Object();
+async function loadNames() {
+  const response = await fetch("json/2022_fam.json");
+  const data = await response.json();
+  console.log(data);
+}
 
-fetch("json/2022_fam.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("HTTP error " + response.status);
-        }
-        return response.json();
-    })
-    .then(data => {
-       famJSON = data;
-   })
-   .catch(function () {
-       console.log("Error fetching data...");
-   });
+// Grab the JSON objects and pass it to a variable
+let famJSON = loadNames();
+
 // let famJSON = '{ ' +
 //     '"person": [' +
 //     '{"name": "Brenda", "assigned": "Sam", "ignore": ["David", "Morgan", "Lilly", "Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +

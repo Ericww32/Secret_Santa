@@ -38,18 +38,14 @@ async function loadNames() {
 //     ']' +
 // '}';
 
-// let famJSON;
-// let famObj;
-// let famNames;
+// Grab the JSON objects and pass it to a variable
+let famJSON = JSON.stringify(loadNames());
 
-    // Grab the JSON objects and pass it to a variable
-    let famObj = loadNames();
+// Creating parsed JSON objects
+let famObj = JSON.parse(famJSON);
 
-    // Creating parsed JSON objects
-    // famObj = JSON.parse(famJSON);
-
-    // Create an array of names for each object
-    let famNames = createArrayNames(famObj);
+// Create an array of names for each object
+let famNames = createArrayNames(famObj);
 
 function createArrayNames(obj) {
     let result = [];

@@ -9,8 +9,12 @@ let reshuffle = 0;
 async function loadNames() {
   const response = await fetch("json/2022_fam.json");
   const data = await response.json();
-  console.log(data);
+
+  return data;
 }
+
+// Grab the JSON objects and pass it to a variable
+let famJSON = JSON.stringify(loadNames());
 
 // let famJSON = '{ ' +
 //     '"person": [' +
@@ -38,13 +42,8 @@ async function loadNames() {
 //     ']' +
 // '}';
 
-// Grab the JSON objects and pass it to a variable
-// let famJSON = JSON.stringify(loadNames());
-
 // Creating parsed JSON objects
-// let famObj = JSON.parse(famJSON);
-
-let famObj = loadNames();
+let famObj = JSON.parse(famJSON);
 
 // Create an array of names for each object
 let famNames = createArrayNames(famObj);

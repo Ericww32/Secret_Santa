@@ -12,9 +12,6 @@ async function loadNames() {
   console.log(data);
 }
 
-// Grab the JSON objects and pass it to a variable
-let famJSON = loadNames();
-
 // let famJSON = '{ ' +
 //     '"person": [' +
 //     '{"name": "Brenda", "assigned": "Sam", "ignore": ["David", "Morgan", "Lilly", "Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
@@ -41,11 +38,22 @@ let famJSON = loadNames();
 //     ']' +
 // '}';
 
-// Creating parsed JSON objects
-let famObj = JSON.parse(famJSON);
+let famJSON;
+let famObj;
+let famNames;
 
-// Create an array of names for each object
-let famNames = createArrayNames(famObj);
+function startup() {
+    // Grab the JSON objects and pass it to a variable
+    famJSON = loadNames();
+
+    // Creating parsed JSON objects
+    famObj = JSON.parse(famJSON);
+
+    // Create an array of names for each object
+    famNames = createArrayNames(famObj);
+}
+
+await startup();
 
 function createArrayNames(obj) {
     let result = [];

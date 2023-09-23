@@ -6,16 +6,6 @@ let cYear = currentDate.getFullYear();
 
 let reshuffle = 0;
 
-async function loadNames() {
-  const response = await fetch("json/2022_fam.json");
-  const data = await response.json();
-
-  return data;
-}
-
-// Grab the JSON objects and pass it to a variable
-// let famJSON = JSON.stringify(loadNames());
-
 let famJSON = '{ ' +
     '"person": [' +
     '{"name": "Brenda", "assigned": "Sam", "ignore": ["David", "Morgan", "Lilly", "Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
@@ -35,7 +25,8 @@ let famJSON = '{ ' +
     '{"name": "Aidan", "assigned": "Mikey", "ignore": ["Imran", "Erin", "Jackie", "Sam", "Ayla", "Aslan"], "history": "", "link": ""},' +
     '{"name": "Ayla", "assigned": "Izzy", "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Ayla", "Aslan"], "history": "", "link": ""},' +
     '{"name": "Aslan", "assigned": "Lilly", "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Ayla"], "history": "", "link": ""},' +
-    '{"name": "Henry", "assigned": "Aidan", "ignore": ["Annette", "Melody", "Jeff", "Eric"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
+    '{"name": "Henry", "assigned": "Aidan", "ignore": ["Annette", "Melody", "Jeff", "Eric", "Aria"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
+    '{"name": "Aria", "assigned": "", "ignore": ["Annette", "Melody", "Jeff", "Eric", "Henry"], "history": "", "link": ""},' +
     '{"name": "Izzy", "assigned": "Ayla", "ignore": ["David", "Morgan", "Lilly", "Brenda", "Mikey"], "history": "", "link": ""},' +
     '{"name": "Lilly", "assigned": "Henry", "ignore": ["David", "Morgan", "Brenda", "Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/registries/holiday/2HC3EM405FBX6/guest-view"},' +
     '{"name": "Mikey", "assigned": "Aslan", "ignore": ["David", "Morgan", "Lilly", "Izzy", "Brenda"], "history": "", "link": ""}' +
@@ -61,8 +52,34 @@ function createArrayNames(obj) {
 // Shuffle every arrays
 function shuffle(arr) {
   arr.sort(() => Math.random() - 0.5);
+  reshuffle++;
+}
 
-  reshuffle ++;
+/*
+ * Runs all the suffle functions together. This is the main function.
+ */
+function runShuffle() {
+    reshuffle = 0;
+
+    shuffle(famNames);
+
+    // console.log("Before:::");
+    // console.log("Fam: " + JSON.stringify(famObj, 0, 4));
+    // console.log("************************************************************");
+
+    assignSanta(famObj, famNames);
+
+    // console.log("************************************************************");
+    // console.log("After:::");
+    // console.log("Fam: " + JSON.stringify(famObj, 0, 4));
+
+    document.getElementById("reshuffleNumber").innerHTML = "Number of reshuffles run in last shuffle: " + reshuffle;
+}
+
+function setHistory(obj) {
+    for (let i = 0; i < obj.person.length; i++) {
+        obj.person[i].history = obj.person[i].assigned;
+    }
 }
 
 // Assign the objects the new secret Santas
@@ -114,39 +131,16 @@ function displayNewlyShuffled(obj) {
     document.getElementById("column_2").innerHTML = col_2;
 }
 
-function setHistory(obj) {
-    for (let i = 0; i < obj.person.length; i++) {
-        obj.person[i].history = obj.person[i].assigned;
-    }
-}
-
-/*
- * Runs all the suffle functions together. This is the main function.
- */
-function runShuffle() {
-    reshuffle = 0;
-
-    shuffle(famNames);
-
-    console.log("Before:::");
-    console.log("Fam: " + JSON.stringify(famObj, 0, 4));
-    console.log("************************************************************");
-
-    assignSanta(famObj, famNames);
-
-    console.log("************************************************************");
-    console.log("After:::");
-    console.log("Fam: " + JSON.stringify(famObj, 0, 4));
-
-    console.log("Reshuffle attepts: " + reshuffle);
-}
-
 // *************************************************
-// Future works
+// Save New Shuffled List
 // *************************************************
-function saveJSON(obj) {
-    const link = document.querySelector(selector);
-    let title = cYear + "_fam";
-    link.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(obj));
-    link.setAttribute("download", `${title}.json`);
+function saveJSON() {
+    let newfamObj = JSON.stringify(famObj);
+    let contentType = "json";
+    let title = (cYear + 1) + "_fam.json";
+    var a = document.createElement("a");
+    var file = new Blob([newfamObj], { type: contentType });
+    a.href = URL.createObjectURL(file);
+    a.download = title;
+    a.click();
 }

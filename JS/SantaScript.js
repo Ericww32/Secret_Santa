@@ -58,20 +58,20 @@ let adultNames = createArrayNames(adultsObj);
 let kidNames = createArrayNames(kidsObj);
 let babyNames = createArrayNames(babiesObj);
 
-function createArrayNames(obj) {
-    let result = [];
+// function createArrayNames(obj) {
+//     let result = [];
 
-    for (let i = 0; i < obj.person.length; i++) {
-        result.push(obj.person[i].name);
-    }
+//     for (let i = 0; i < obj.person.length; i++) {
+//         result.push(obj.person[i].name);
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
 // Shuffle every arrays
-function shuffle(arr) {
-  arr.sort(() => Math.random() - 0.5);
-}
+// function shuffle(arr) {
+//   arr.sort(() => Math.random() - 0.5);
+// }
 
 // Assign the objects the new secret Santas
 function assignSanta(obj, arr, columnDisplay) {
@@ -85,7 +85,6 @@ function assignSanta(obj, arr, columnDisplay) {
 
                // console.log("Person: " + JSON.stringify(obj.person[i]));
                // console.log("Array: " + arr[i]);
-               console.log("Reshuffling...");
                shuffle(arr);
                i = -1;
         } else {
@@ -97,76 +96,76 @@ function assignSanta(obj, arr, columnDisplay) {
     displayNewlyShuffled(obj, columnDisplay);
 }
 
-function displayNewlyShuffled(obj, columnDisplay) {
-    let html = "<ul>";
+// function displayNewlyShuffled(obj, columnDisplay) {
+//     let html = "<ul>";
 
-    for (let i = 0; i < obj.person.length; i++) {
-        html += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";
-    }
+//     for (let i = 0; i < obj.person.length; i++) {
+//         html += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";
+//     }
 
-    html += "</ul>";
-    columnDisplay.innerHTML = html;
-}
+//     html += "</ul>";
+//     columnDisplay.innerHTML = html;
+// }
 
-function setHistory(obj) {
-    for (let i = 0; i < obj.person.length; i++) {
-        obj.person[i].history = obj.person[i].assigned;
-    }
-}
+// function setHistory(obj) {
+//     for (let i = 0; i < obj.person.length; i++) {
+//         obj.person[i].history = obj.person[i].assigned;
+//     }
+// }
 
-function saveJSON(selector, obj) {
-    const link = document.querySelector(selector);
-    let name = "";
+// function saveJSON(selector, obj) {
+//     const link = document.querySelector(selector);
+//     let name = "";
 
-    switch (selector) {
-        case "adultsModal":
-                name = "adults";
-            break;
-        case "kidsModal":
-                name = "kids";
-            break;
-        case "babiesModal":
-                name = "babies";
-            break;
-        default: "fam";
+//     switch (selector) {
+//         case "adultsModal":
+//                 name = "adults";
+//             break;
+//         case "kidsModal":
+//                 name = "kids";
+//             break;
+//         case "babiesModal":
+//                 name = "babies";
+//             break;
+//         default: "fam";
 
-    }
-    let title = cYear + "_" + name;
-    link.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(obj));
-    link.setAttribute("download", `${title}.json`);
-}
+//     }
+//     let title = cYear + "_" + name;
+//     link.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(obj));
+//     link.setAttribute("download", `${title}.json`);
+// }
 
-function saveAllJSON() {
-    saveJSON("adultsModal");
-    saveJSON("kidsModal");
-    saveJSON("babiesModal");
-}
+// function saveAllJSON() {
+//     saveJSON("adultsModal");
+//     saveJSON("kidsModal");
+//     saveJSON("babiesModal");
+// }
 
 /*
  * Runs all the suffle functions together. This is the main function.
  */
-function runShuffle() {
-    shuffle(adultNames);
-    shuffle(kidNames);
-    shuffle(babyNames);
+// function runShuffle() {
+//     shuffle(adultNames);
+//     shuffle(kidNames);
+//     shuffle(babyNames);
 
-    // console.log("Before:::");
-    // console.log("Adults: " + JSON.stringify(adultsObj, 0, 4));
-    // console.log("Kids: " + JSON.stringify(kidsObj, 0, 4));
-    // console.log("Babies: " + JSON.stringify(babiesObj, 0, 4));
-    console.log("************************************************************");
+//     // console.log("Before:::");
+//     // console.log("Adults: " + JSON.stringify(adultsObj, 0, 4));
+//     // console.log("Kids: " + JSON.stringify(kidsObj, 0, 4));
+//     // console.log("Babies: " + JSON.stringify(babiesObj, 0, 4));
+//     console.log("************************************************************");
 
-    setHistory(adultsObj);
-    setHistory(kidsObj);
-    setHistory(babiesObj);
+//     setHistory(adultsObj);
+//     setHistory(kidsObj);
+//     setHistory(babiesObj);
 
-    assignSanta(adultsObj, adultNames, document.getElementById("adultsModal"));
-    assignSanta(kidsObj, kidNames, document.getElementById("kidsModal"));
-    assignSanta(babiesObj, babyNames, document.getElementById("babiesModal"));
+//     assignSanta(adultsObj, adultNames, document.getElementById("adultsModal"));
+//     assignSanta(kidsObj, kidNames, document.getElementById("kidsModal"));
+//     assignSanta(babiesObj, babyNames, document.getElementById("babiesModal"));
 
-    console.log("************************************************************");
-    // console.log("After:::");
-    // console.log("Adults: " + JSON.stringify(adultsObj, 0, 4));
-    // console.log("Kids: " + JSON.stringify(kidsObj, 0, 4));
-    // console.log("Babies: " + JSON.stringify(babiesObj, 0, 4));
-}
+//     console.log("************************************************************");
+//     // console.log("After:::");
+//     // console.log("Adults: " + JSON.stringify(adultsObj, 0, 4));
+//     // console.log("Kids: " + JSON.stringify(kidsObj, 0, 4));
+//     // console.log("Babies: " + JSON.stringify(babiesObj, 0, 4));
+// }

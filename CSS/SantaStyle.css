@@ -337,3 +337,15 @@
         font-size: 69px;
     }
 }
+
+@media (max-width: 760px) {
+    .music_player {
+        padding-bottom: 12%;
+    }
+}
+
+@media (min-width: 761px) {
+    .music_player {
+        padding-bottom: 3%;
+    }
+}

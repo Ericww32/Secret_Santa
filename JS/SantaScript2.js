@@ -6,32 +6,29 @@ let cYear = currentDate.getFullYear();
 
 let reshuffle = 0;
 
-let famJSON = '{ ' +
-    '"person": [' +
-    '{"name": "Brenda", "assigned": "Sam", "ignore": ["David", "Morgan", "Lilly", "Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
-    '{"name": "David", "assigned": "Joe", "ignore": ["Brenda", "Morgan", "Lilly", "Izzy", "Mikey"], "history": "", "link": ""},' +
-    '{"name": "Jackie", "assigned": "Brenda", "ignore": ["Sam", "Erin", "Imran", "Aidan", "Ayla", "Aslan"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"},' +
-    '{"name": "Sam", "assigned": "Annette", "ignore": ["Jackie", "Erin", "Imran", "Aidan", "Ayla", "Aslan"], "history": "", "link": ""},' +
-    '{"name": "Annette", "assigned": "Cindy", "ignore": ["Henry", "Melody", "Jeff", "Eric"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
-    '{"name": "Joe", "assigned": "David", "ignore": ["Cindy", "Mikayla"], "history": "", "link": ""},' +
-    '{"name": "Cindy", "assigned": "Jackie", "ignore": ["Joe", "Mikayla"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"},' +
-    '{"name": "Eric", "assigned": "Imran", "ignore": ["Henry", "Annette", "Melody", "Jeff"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2TB6LH8QBNIRE?ref_=wl_share"},' +
-    '{"name": "Erin", "assigned": "Morgan", "ignore": ["Imran", "Jackie", "Sam", "Aidan", "Ayla", "Aslan"], "history": "", "link": ""},' +
-    '{"name": "Imran", "assigned": "Jeff", "ignore": ["Erin", "Jackie", "Sam", "Aidan", "Ayla", "Aslan"], "history": "", "link": ""},' +
-    '{"name": "Jeff", "assigned": "Erin", "ignore": ["Henry", "Annette", "Melody", "Eric"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +
-    '{"name": "Melody", "assigned": "Mikayla", "ignore": ["Henry", "Annette", "Jeff", "Eric"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"},' +
-    '{"name": "Mikayla", "assigned": "Eric", "ignore": ["Cindy", "Joe"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
-    '{"name": "Morgan", "assigned": "Melody", "ignore": ["David", "Brenda", "Lilly", "Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"},' +
-    '{"name": "Aidan", "assigned": "Mikey", "ignore": ["Imran", "Erin", "Jackie", "Sam", "Ayla", "Aslan"], "history": "", "link": ""},' +
-    '{"name": "Ayla", "assigned": "Izzy", "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Ayla", "Aslan"], "history": "", "link": ""},' +
-    '{"name": "Aslan", "assigned": "Lilly", "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Ayla"], "history": "", "link": ""},' +
-    '{"name": "Henry", "assigned": "Aidan", "ignore": ["Annette", "Melody", "Jeff", "Eric", "Aria"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
-    '{"name": "Aria", "assigned": "", "ignore": ["Annette", "Melody", "Jeff", "Eric", "Henry"], "history": "", "link": ""},' +
-    '{"name": "Izzy", "assigned": "Ayla", "ignore": ["David", "Morgan", "Lilly", "Brenda", "Mikey"], "history": "", "link": ""},' +
-    '{"name": "Lilly", "assigned": "Henry", "ignore": ["David", "Morgan", "Brenda", "Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/registries/holiday/2HC3EM405FBX6/guest-view"},' +
-    '{"name": "Mikey", "assigned": "Aslan", "ignore": ["David", "Morgan", "Lilly", "Izzy", "Brenda"], "history": "", "link": ""}' +
-    ']' +
-'}';
+let famJSON = '{ "person": [' +
+        '{"name":"Brenda","assigned":"Imran","ignore":["David","Morgan","Lilly","Izzy","Mikey"],"history":"Sam","link":"https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
+        '{"name":"David","assigned":"Erin","ignore":["Brenda","Morgan","Lilly","Izzy","Mikey"],"history":"Joe","link":""},' +
+        '{"name":"Jackie","assigned":"Morgan","ignore":["Sam","Erin","Imran","Aidan","Ayla","Aslan"],"history":"Brenda","link":"https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"},' +
+        '{"name":"Sam","assigned":"Aria","ignore":["Jackie","Erin","Imran","Aidan","Ayla","Aslan"],"history":"Annette","link":""},' +
+        '{"name":"Annette","assigned":"Mikayla","ignore":["Henry","Melody","Jeff","Eric", "Aria"],"history":"Cindy","link":"https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
+        '{"name":"Joe","assigned":"Aslan","ignore":["Cindy","Mikayla"],"history":"David","link":""},' +
+        '{"name":"Cindy","assigned":"Melody","ignore":["Joe","Mikayla"],"history":"Jackie","link":"https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"},' +
+        '{"name":"Eric","assigned":"Lilly","ignore":["Henry","Annette","Melody","Jeff", "Aria"],"history":"Imran","link":"https://www.amazon.com/hz/wishlist/ls/2TB6LH8QBNIRE?ref_=wl_share"},' +
+        '{"name":"Erin","assigned":"Brenda","ignore":["Imran","Jackie","Sam","Aidan","Ayla","Aslan"],"history":"Morgan","link":""},' +
+        '{"name":"Imran","assigned":"Annette","ignore":["Erin","Jackie","Sam","Aidan","Ayla","Aslan"],"history":"Jeff","link":""},' +
+        '{"name":"Jeff","assigned":"Joe","ignore":["Henry","Annette","Melody","Eric", "Aria"],"history":"Erin","link":"https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +
+        '{"name":"Melody","assigned":"Aidan","ignore":["Henry","Annette","Jeff","Eric", "Aria"],"history":"Mikayla","link":"https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"},' +
+        '{"name":"Mikayla","assigned":"Jeff","ignore":["Cindy","Joe"],"history":"Eric","link":"https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
+        '{"name":"Morgan","assigned":"Ayla","ignore":["David","Brenda","Lilly","Izzy","Mikey"],"history":"Melody","link":"https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"},' +
+        '{"name":"Aidan","assigned":"Henry","ignore":["Imran","Erin","Jackie","Sam","Ayla","Aslan"],"history":"Mikey","link":""},' +
+        '{"name":"Ayla","assigned":"Mikey","ignore":["Aidan","Imran","Erin","Jackie","Sam","Ayla","Aslan"],"history":"Izzy","link":""},' +
+        '{"name":"Aslan","assigned":"Cindy","ignore":["Aidan","Imran","Erin","Jackie","Sam","Ayla"],"history":"Lilly","link":""},' +
+        '{"name":"Henry","assigned":"Izzy","ignore":["Annette","Melody","Jeff","Eric","Aria"],"history":"Aidan","link":"https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
+        '{"name":"Aria","assigned":"David","ignore":["Annette","Melody","Jeff","Eric","Henry"],"history":"","link":""},{"name":"Izzy","assigned":"Sam","ignore":["David","Morgan","Lilly","Brenda","Mikey"],"history":"Ayla","link":""},' +
+        '{"name":"Lilly","assigned":"Jackie","ignore":["David","Morgan","Brenda","Izzy","Mikey"],"history":"Henry","link":"https://www.amazon.com/registries/holiday/2HC3EM405FBX6/guest-view"},' +
+        '{"name":"Mikey","assigned":"Eric","ignore":["David","Morgan","Lilly","Izzy","Brenda"],"history":"Aslan","link":""}' +
+    ']}';
 
 // Creating parsed JSON objects
 let famObj = JSON.parse(famJSON);
@@ -60,19 +57,8 @@ function shuffle(arr) {
  */
 function runShuffle() {
     reshuffle = 0;
-
     shuffle(famNames);
-
-    // console.log("Before:::");
-    // console.log("Fam: " + JSON.stringify(famObj, 0, 4));
-    // console.log("************************************************************");
-
     assignSanta(famObj, famNames);
-
-    // console.log("************************************************************");
-    // console.log("After:::");
-    // console.log("Fam: " + JSON.stringify(famObj, 0, 4));
-
     document.getElementById("reshuffleNumber").innerHTML = "Number of reshuffles run in last shuffle: " + reshuffle;
 }
 

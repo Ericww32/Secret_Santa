@@ -4,168 +4,256 @@ let cDay = currentDate.getDate();
 let cMonth = currentDate.getMonth() + 1;
 let cYear = currentDate.getFullYear();
 
-// Check to see if the current date is Dec 24 and if it is, run this script
-// if (cMonth == 12) {
-//     if (cDay == 24) {
-//
-//     }
-// }
+document.getElementById("currYear").innerHTML =  "Copyright © Willoughby " + cYear;
+document.getElementById("getYear").innerHTML = cYear;
 
-// Grab the JSON objects and pass it to a variable
-let adultsJSON = '{ ' +
-    '"person": [' +
-    '{"name": "Brenda", "assigned": "Sam", "ignore": ["David"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
-    '{"name": "David", "assigned": "Joe", "ignore": ["Brenda"], "history": "", "link": ""},' +
-    '{"name": "Jackie", "assigned": "Brenda", "ignore": ["Sam"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"},' +
-    '{"name": "Sam", "assigned": "Annette", "ignore": ["Jackie"], "history": "", "link": ""},' +
-    '{"name": "Annette", "assigned": "Cindy", "ignore": ["NULL"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
-    '{"name": "Joe", "assigned": "David", "ignore": ["Cindy"], "history": "", "link": ""},' +
-    '{"name": "Cindy", "assigned": "Jackie", "ignore": ["Joe"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"}' +
-    ']' +
-'}';
+let reshuffle = 0;
 
-let kidsJSON = '{ ' +
-    '"person": [' +
-    '{"name": "Eric", "assigned": "Imran", "ignore": ["Melody", "Jeff"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2TB6LH8QBNIRE?ref_=wl_share"},' +
-    '{"name": "Erin", "assigned": "Morgan", "ignore": ["Imran"], "history": "", "link": ""},' +
-    '{"name": "Imran", "assigned": "Jeff", "ignore": ["Erin"], "history": "", "link": ""},' +
-    '{"name": "Jeff", "assigned": "Erin", "ignore": ["Melody", "Eric"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +
-    '{"name": "Melody", "assigned": "Mikayla", "ignore": ["Jeff", "Eric"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"},' +
-    '{"name": "Mikayla", "assigned": "Eric", "ignore": ["NULL"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
-    '{"name": "Morgan", "assigned": "Melody", "ignore": ["NULL"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"}' +
-    ']' +
-'}';
+let over_the_hill_JSON = '{ "person": [' + 
+        '{"name":"Brenda","assigned":"Imran","ignore":["David","Morgan","Lilly","Izzy","Mikey"],"history":"Sam","link":"https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
+        '{"name":"David","assigned":"Erin","ignore":["Brenda","Morgan","Lilly","Izzy","Mikey"],"history":"Joe","link":""},' +
+        '{"name":"Jackie","assigned":"Morgan","ignore":["Sam","Erin","Imran","Aidan","Ayla","Aslan"],"history":"Brenda","link":"https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"},' +
+        '{"name":"Sam","assigned":"Aria","ignore":["Jackie","Erin","Imran","Aidan","Ayla","Aslan"],"history":"Annette","link":""},' +
+        '{"name":"Annette","assigned":"Mikayla","ignore":["Henry","Melody","Jeff","Eric", "Aria"],"history":"Cindy","link":"https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"},' +
+        '{"name":"Joe","assigned":"Aslan","ignore":["Cindy","Mikayla"],"history":"David","link":""},' +
+        '{"name":"Cindy","assigned":"Melody","ignore":["Joe","Mikayla"],"history":"Jackie","link":"https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"},' +
+        '{"name":"Eric","assigned":"Lilly","ignore":["Henry","Annette","Melody","Jeff", "Aria"],"history":"Imran","link":"https://www.amazon.com/registries/gl/guest-view/3L2IRM8WFNWWA"},' +
+        '{"name":"Erin","assigned":"Brenda","ignore":["Imran","Jackie","Sam","Aidan","Ayla","Aslan"],"history":"Morgan","link":""},' +
+        '{"name":"Imran","assigned":"Annette","ignore":["Erin","Jackie","Sam","Aidan","Ayla","Aslan"],"history":"Jeff","link":""},' +
+        '{"name":"Jeff","assigned":"Joe","ignore":["Henry","Annette","Melody","Eric", "Aria"],"history":"Erin","link":"https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"},' +
+        '{"name":"Melody","assigned":"Aidan","ignore":["Henry","Annette","Jeff","Eric", "Aria"],"history":"Mikayla","link":"https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"},' +
+        '{"name":"Mikayla","assigned":"Jeff","ignore":["Cindy","Joe"],"history":"Eric","link":"https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"},' +
+        '{"name":"Morgan","assigned":"Ayla","ignore":["David","Brenda","Lilly","Izzy","Mikey"],"history":"Melody","link":"https://www.amazon.com/hz/wishlist/ls/RQ4O9T8XMS5?ref_=wl_share"},' +
+        '{"name":"Lilly","assigned":"Jackie","ignore":["David","Morgan","Brenda","Izzy","Mikey"],"history":"Henry","link":"https://www.amazon.com/registries/gl/guest-view/PK2YSMZEA27R"},' +
+        '{"name":"Mikey","assigned":"Eric","ignore":["David","Morgan","Lilly","Izzy","Brenda"],"history":"Aslan","link":""}' +
+    ']}';
 
-let babiesJSON = '{ ' +
-    '"person": [' +
-    '{"name": "Aidan", "assigned": "Mikey", "ignore": ["Ayla", "Aslan"], "history": "", "link": ""},' +
-    '{"name": "Ayla", "assigned": "Izzy", "ignore": ["Aidan", "Aslan"], "history": "", "link": ""},' +
-    '{"name": "Aslan", "assigned": "Lilly", "ignore": ["Ayla", "Aidan"], "history": "", "link": ""},' +
-    '{"name": "Henry", "assigned": "Aidan", "ignore": ["NULL"], "history": "", "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
-    '{"name": "Izzy", "assigned": "Ayla", "ignore": ["Lilly", "Mikey"], "history": "", "link": ""},' +
-    '{"name": "Lilly", "assigned": "Henry", "ignore": ["Izzy", "Mikey"], "history": "", "link": "https://www.amazon.com/registries/holiday/2HC3EM405FBX6/guest-view"},' +
-    '{"name": "Mikey", "assigned": "Aslan", "ignore": ["Izzy", "Lilly"], "history": "", "link": ""}' +
-    ']' +
-'}';
+let littles_JSON = '{ "person": [' + 
+        '{"name":"Aidan","assigned":"Henry","ignore":["Imran","Erin","Jackie","Sam","Ayla","Aslan"],"history":"Mikey","link":""},' +
+        '{"name":"Ayla","assigned":"Mikey","ignore":["Aidan","Imran","Erin","Jackie","Sam","Aslan"],"history":"Izzy","link":""},' +
+        '{"name":"Aslan","assigned":"Cindy","ignore":["Aidan","Imran","Erin","Jackie","Sam","Ayla"],"history":"Lilly","link":""},' +
+        '{"name":"Henry","assigned":"Izzy","ignore":["Annette","Melody","Jeff","Aria"],"history":"Aidan","link":"https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
+        '{"name":"Aria","assigned":"David","ignore":["Annette","Melody","Jeff","Henry"],"history":"Ayla","link":""},' +
+        '{"name":"Izzy","assigned":"Sam","ignore":["David","Morgan","Lilly","Brenda","Mikey"],"history":"Ayla","link":""}' +
+    ']}';
 
 // Creating parsed JSON objects
-let adultsObj = JSON.parse(adultsJSON);
-let kidsObj = JSON.parse(kidsJSON);
-let babiesObj = JSON.parse(babiesJSON);
+let overTheHillObj = JSON.parse(over_the_hill_JSON);
+let littlesObj = JSON.parse(littles_JSON);
+
+// Creating backups of objects to fall back to for more accurate results
+const overTheHillObjOrig = JSON.parse(over_the_hill_JSON);
+const littlesObjOrig = JSON.parse(littles_JSON);
+
+// Display the data
+displayOverTheHills(overTheHillObj);
+displayLittles(littlesObj);
 
 // Create an array of names for each object
-let adultNames = createArrayNames(adultsObj);
-let kidNames = createArrayNames(kidsObj);
-let babyNames = createArrayNames(babiesObj);
+let overTheHillNames = createArrayNames(overTheHillObj);
+let littlesNames = createArrayNames(littlesObj);
 
-// function createArrayNames(obj) {
-//     let result = [];
+function createArrayNames(obj) {
+    let result = [];
 
-//     for (let i = 0; i < obj.person.length; i++) {
-//         result.push(obj.person[i].name);
-//     }
+    for (let i = 0; i < obj.person.length; i++) {
+        result.push(obj.person[i].name);
+    }
 
-//     return result;
-// }
+    return result;
+}
 
 // Shuffle every arrays
-// function shuffle(arr) {
-//   arr.sort(() => Math.random() - 0.5);
-// }
+function shuffle(arr) {
+  arr.sort(() => Math.random() - 0.5);
+  reshuffle++;
+}
 
-// Assign the objects the new secret Santas
-function assignSanta(obj, arr, columnDisplay) {
+/*
+ * Runs all the suffle functions together. This is the main function.
+ */
+function runShuffle() {
+    reshuffle = 0;
+    // Shuffling names
+    shuffle(overTheHillNames);
+    shuffle(littlesNames);
+    // Assigning people... other people
+    let overTheHills = assignSanta(overTheHillObj, overTheHillNames);
+    let lils = assignSanta(littlesObj, littlesNames);
+    // Display output
+    displayOverTheHillsShuffled(overTheHills);
+    displayLittlesShuffled(lils);
+    // Logging scores
+    console.log("*****************************************");
+    console.log("Number of reshuffles run in last shuffle: " + reshuffle);
+}
+
+function setHistory(obj) {
+    for (let i = 0; i < obj.person.length; i++) {
+        obj.person[i].history = obj.person[i].assigned;
+    }
+}
+
+// Assign the objects the new Secret Santas
+function assignSanta(obj, arr) {
+    setHistory(obj);
 
     for (let i = 0; i < obj.person.length; i++) {
 
         if(obj.person[i].name == arr[i] ||
            obj.person[i].ignore[0] == arr[i] ||
            obj.person[i].ignore[1] == arr[i] ||
+           obj.person[i].ignore[2] == arr[i] ||
+           obj.person[i].ignore[3] == arr[i] ||
+           obj.person[i].ignore[4] == arr[i] ||
+           obj.person[i].ignore[5] == arr[i] ||
            obj.person[i].history == arr[i]) {
 
-               // console.log("Person: " + JSON.stringify(obj.person[i]));
-               // console.log("Array: " + arr[i]);
                shuffle(arr);
                i = -1;
         } else {
             obj.person[i].assigned = arr[i];
-            // console.log(obj.person[i].name + " was assigned " + obj.person[i].assigned);
         }
     }
 
-    displayNewlyShuffled(obj, columnDisplay);
+    return obj;
 }
 
-// function displayNewlyShuffled(obj, columnDisplay) {
-//     let html = "<ul>";
-
-//     for (let i = 0; i < obj.person.length; i++) {
-//         html += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";
-//     }
-
-//     html += "</ul>";
-//     columnDisplay.innerHTML = html;
-// }
-
-// function setHistory(obj) {
-//     for (let i = 0; i < obj.person.length; i++) {
-//         obj.person[i].history = obj.person[i].assigned;
-//     }
-// }
-
-// function saveJSON(selector, obj) {
-//     const link = document.querySelector(selector);
-//     let name = "";
-
-//     switch (selector) {
-//         case "adultsModal":
-//                 name = "adults";
-//             break;
-//         case "kidsModal":
-//                 name = "kids";
-//             break;
-//         case "babiesModal":
-//                 name = "babies";
-//             break;
-//         default: "fam";
-
-//     }
-//     let title = cYear + "_" + name;
-//     link.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(obj));
-//     link.setAttribute("download", `${title}.json`);
-// }
-
-// function saveAllJSON() {
-//     saveJSON("adultsModal");
-//     saveJSON("kidsModal");
-//     saveJSON("babiesModal");
-// }
-
-/*
- * Runs all the suffle functions together. This is the main function.
+/**
+ * linkOrNo
+ * Link or no link (that is the question)
+ * @param {*} obj the family object containing the list of names and assigned people.
+ * @param {*} i index placement of the preceeding loop to find the assigned person.
+ * @returns the HTML to use depending on if a link is found or not.
  */
-// function runShuffle() {
-//     shuffle(adultNames);
-//     shuffle(kidNames);
-//     shuffle(babyNames);
+function linkOrNo(obj, i) {
+    let result = "";
 
-//     // console.log("Before:::");
-//     // console.log("Adults: " + JSON.stringify(adultsObj, 0, 4));
-//     // console.log("Kids: " + JSON.stringify(kidsObj, 0, 4));
-//     // console.log("Babies: " + JSON.stringify(babiesObj, 0, 4));
-//     console.log("************************************************************");
+    if (getLink(obj, obj.person[i].assigned) == "") {
+        result += obj.person[i].name + ' ➡ ' + obj.person[i].assigned + '<br />' +
+            '<button class="btn-jolly-dead">' + obj.person[i].assigned + '\'s wishlist</a></button><br />';
+    } else {
+        result += obj.person[i].name + ' ➡ ' + obj.person[i].assigned + '<br />' +
+            '<button class="btn-jolly"><a href="' + getLink(obj, obj.person[i].assigned) +
+            '">' + obj.person[i].assigned + '\'s wishlist</a></button><br />';
+    }
 
-//     setHistory(adultsObj);
-//     setHistory(kidsObj);
-//     setHistory(babiesObj);
+    return result;
+}
 
-//     assignSanta(adultsObj, adultNames, document.getElementById("adultsModal"));
-//     assignSanta(kidsObj, kidNames, document.getElementById("kidsModal"));
-//     assignSanta(babiesObj, babyNames, document.getElementById("babiesModal"));
+/**
+ * getLink
+ * Exactly how it sounds. This function gets the link from the person that is assigned
+ * @param {*} obj the family object containing the list of names and assigned people.
+ * @param {*} assigned the person assigned to the gift giver.
+ * @returns a link of the assigned person's wishlist or a blank ""
+ */
+function getLink(obj, assigned) {
+    var result;
 
-//     console.log("************************************************************");
-//     // console.log("After:::");
-//     // console.log("Adults: " + JSON.stringify(adultsObj, 0, 4));
-//     // console.log("Kids: " + JSON.stringify(kidsObj, 0, 4));
-//     // console.log("Babies: " + JSON.stringify(babiesObj, 0, 4));
-// }
+    for (var i = 0; i < obj.person.length; i++) {
+        // look for the entry with a matching `name` value
+        if (obj.person[i].name == assigned) {
+            result = obj.person[i].link;
+            break;
+        }
+    }
+    return result;
+}
+
+/**
+ * displayOverTheHills
+ * Displaying the data and putting it in the columns
+ * @param {*} obj the "over the hill" object containing the list of names and assigned people.
+ */
+function displayOverTheHills(obj) {
+    let col_0 = "<ul>";
+    let col_1 = "<ul>";
+
+    for (let i = 0; i < obj.person.length; i++) {
+        if (i >= 8) {
+            col_1 += linkOrNo(obj, i);
+        } else {
+            col_0 += linkOrNo(obj, i);
+        }
+    }
+
+    col_0 += "</ul>";
+    col_1 += "</ul>";
+
+    document.getElementById("santa_favs").innerHTML = col_0;
+    document.getElementById("naughty_list").innerHTML = col_1;
+}
+
+/**
+ * displayLittles
+ * Displaying the data and putting it in the columns
+ * @param {*} obj the "littles" object containing the list of names and assigned people.
+ */
+function displayLittles(obj) {
+    let lil_column = "<ul>";
+
+    for (let i = 0; i < obj.person.length; i++) {
+        lil_column += linkOrNo(obj, i);
+    }
+
+    lil_column += "</ul>";
+
+    document.getElementById("nice_list").innerHTML = lil_column;
+}
+
+/**
+ * displayOverTheHillsShuffled
+ * Displaying the data and putting it in the columns
+ * @param {*} obj the "over the hill" object containing the list of names and assigned people.
+ */
+function displayOverTheHillsShuffled(obj) {
+    let col_0 = "<ul>";
+    let col_1 = "<ul>";
+
+    for (let i = 0; i < obj.person.length; i++) {
+        if (i >= 8) {
+            col_1 += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";
+        } else {
+            col_0 += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";
+        }
+    }
+
+    col_0 += "</ul>";
+    col_1 += "</ul>";
+
+    document.getElementById("column_0").innerHTML = col_0;
+    document.getElementById("column_1").innerHTML = col_1;
+}
+
+/**
+ * displayLittlesShuffled
+ * Displaying the data and putting it in the columns
+ * @param {*} obj the "littles" object containing the list of names and assigned people.
+ */
+function displayLittlesShuffled(obj) {
+    let col_2 = "<ul>";
+
+    for (let i = 0; i < obj.person.length; i++) {
+        col_2 += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";
+    }
+
+    col_2 += "</ul>";
+
+    document.getElementById("column_2").innerHTML = col_2;
+}
+
+/**
+ * saveJSON
+ * Save New Shuffled List
+ */
+function saveJSON() {
+    let newfamObj = JSON.stringify(overTheHillObj);
+    let contentType = "json";
+    let title = (cYear + 1) + "_fam.json";
+    var a = document.createElement("a");
+    var file = new Blob([newfamObj], { type: contentType });
+    a.href = URL.createObjectURL(file);
+    a.download = title;
+    a.click();
+}

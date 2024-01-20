@@ -1,3 +1,6 @@
+/*
+Fonts
+*/
 @font-face {
     font-family: CandyCane;
     src: url("../Assets/Fonts/CandyCane.ttf");
@@ -8,6 +11,9 @@
     src: url("../Assets/Fonts/MountainsofChristmas.ttf");
 }
 
+/*
+Countdown
+*/
 .final-count-down {
     color: red;
     text-shadow: 1px 0px white;
@@ -26,6 +32,9 @@
     padding: 10px;
 }
 
+/*
+Text
+*/
 .text-jolly {
     color: white;
     font-family: ChristmasMountainFont;
@@ -36,36 +45,26 @@
     font-family: ChristmasMountainFont;
 }
 
-.text-copyright {
-    color: red;
-    background-color: gold;
-    text-shadow: 1px 1px;
-    font-family: ChristmasMountainFont;
-    font-size: 25px;
-}
-
-.text-rules {
-    color: red;
-    font-family: ChristmasMountainFont;
-    font-size: 25px;
-}
-
+/* rename to who_got_column_title */
 .holly-column-title {
-    color: white;
+    color: #fff;
     font-family: ChristmasMountainFont;
     font-size: 32px;
 }
 
+/* rename to who_got_column_text */
 .holly-column-text {
-    color: white;
+    color: #fff;
     font-family: ChristmasMountainFont;
     font-size: 25px;
 }
 
+/* rename to holly_bkgrd */
 .holly {
     background-color: red;
 }
 
+/* rename to jolly_bkgrd */
 .jolly {
     background-color: green;
 }
@@ -81,35 +80,23 @@
     font-family: cursive;
 }
 
+/* 
+Play Button 
+*/
 #pButton {
     height: 32px !important;
     width: 32px !important;
     float: left !important;
 }
 
-.btn-holly {
+/*
+Who Got Who Column Button
+*/
+/* Rename to who_got_active */
+.btn-jolly { 
     display: inline-block;
     font-family: ChristmasMountainFont;
-    color: red;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 0.125rem solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.5rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.btn-jolly {
-    display: inline-block;
-    font-family: ChristmasMountainFont;
-    color: green;
+    color: black;
     background-color: gold;
     text-align: center;
     vertical-align: middle;
@@ -125,6 +112,7 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+/* rename to who_got_dead */
 .btn-jolly-dead {
     display: inline-block;
     font-family: ChristmasMountainFont;
@@ -144,11 +132,20 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-holly:hover {
-    color: green;
-    text-decoration: none;
+/*
+Copywrite Footer
+*/
+.text-copyright {
+    color: red;
+    background-color: gold;
+    text-shadow: 1px 1px;
+    font-family: ChristmasMountainFont;
+    font-size: 25px;
 }
 
+/*
+Video play button 
+*/
 .video-play-button {
     position: relative;
     z-index: 10;
@@ -267,6 +264,9 @@
     background-image: url("../Assets/img/pauseBtn.png");
 }
 
+/*
+Media
+*/
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -279,31 +279,6 @@
     }
 }
 
-/* animated pause/play button */
-/* .button {
-  border: 0;
-  background: transparent;
-  box-sizing: border-box;
-  width: 0;
-  height: 74px;
-
-  border-color: transparent transparent transparent #202020;
-  transition: 100ms all ease;
-  cursor: pointer;
-
-  // play state
-  border-style: solid;
-  border-width: 37px 0 37px 60px;
-
-  &.paused {
-    border-style: double;
-    border-width: 0px 0 0px 60px;
-  }
-
-  &:hover {
-    border-color: transparent transparent transparent #404040;
-  }
-} */
 @media (min-width: 576px) {
     .final-count-down {
         font-size: 32px;

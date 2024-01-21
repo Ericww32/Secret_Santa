@@ -4,9 +4,6 @@ let cDay = currentDate.getDate();
 let cMonth = currentDate.getMonth() + 1;
 let cYear = currentDate.getFullYear();
 
-document.getElementById("currYear").innerHTML =  "Copyright © Willoughby " + cYear;
-document.getElementById("getYear").innerHTML = cYear;
-
 let reshuffle = 0;
 
 let over_the_hill_JSON = '{ "person": [' + 
@@ -45,13 +42,24 @@ let littlesObj = JSON.parse(littles_JSON);
 const overTheHillObjOrig = JSON.parse(over_the_hill_JSON);
 const littlesObjOrig = JSON.parse(littles_JSON);
 
-// Display the data
-displayOverTheHills(overTheHillObj);
-displayLittles(littlesObj);
+// import person from './2023_fam.json' assert { type: 'json' };
+// console.log(person);
+
+fetch('./2023_fam.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+// Set the copyright and year
+document.getElementById("currYear").innerHTML =  "Copyright © Willoughby " + cYear;
+document.getElementById("getYear").innerHTML = cYear;
 
 // Create an array of names for each object
 let overTheHillNames = createArrayNames(overTheHillObj);
 let littlesNames = createArrayNames(littlesObj);
+
+// Display the data
+displayOverTheHills(overTheHillObj);
+displayLittles(littlesObj);
 
 function createArrayNames(obj) {
     let result = [];
@@ -245,12 +253,36 @@ function displayLittlesShuffled(obj) {
 
 /**
  * saveJSON
- * Save New Shuffled List
+ * Saves 2 different files by running 2 functions
  */
 function saveJSON() {
+    save_over_the_hill_JSON();
+    save_littles_JSON();
+}
+
+/**
+ * save_over_the_hill_JSON
+ * Save New Over The Hill Shuffled List
+ */
+function save_over_the_hill_JSON() {
     let newfamObj = JSON.stringify(overTheHillObj);
     let contentType = "json";
-    let title = (cYear + 1) + "_fam.json";
+    let title = (cYear + 1) + "_over_the_hill.json";
+    var a = document.createElement("a");
+    var file = new Blob([newfamObj], { type: contentType });
+    a.href = URL.createObjectURL(file);
+    a.download = title;
+    a.click();
+}
+
+/**
+ * save_littles_JSON
+ * Save New Littles Shuffled List
+ */
+function save_littles_JSON() {
+    let newfamObj = JSON.stringify(littlesObj);
+    let contentType = "json";
+    let title = (cYear + 1) + "_littles.json";
     var a = document.createElement("a");
     var file = new Blob([newfamObj], { type: contentType });
     a.href = URL.createObjectURL(file);

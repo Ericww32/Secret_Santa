@@ -4,8 +4,13 @@ let cDay = currentDate.getDate();
 let cMonth = currentDate.getMonth() + 1;
 let cYear = currentDate.getFullYear();
 
+/**
+ * Reshuffle counter to see how many times the
+ * shuffle had to be run before getting a satisfied result.
+ */ 
 let reshuffle = 0;
 
+// JSON varaibles
 let over_the_hill_JSON = '{ "person": [' + 
         '{"name":"Brenda","assigned":"Imran","ignore":["David","Morgan","Lilly","Izzy","Mikey"],"history":"Sam","link":"https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"},' +
         '{"name":"David","assigned":"Erin","ignore":["Brenda","Morgan","Lilly","Izzy","Mikey"],"history":"Joe","link":""},' +
@@ -41,13 +46,6 @@ let littlesObj = JSON.parse(littles_JSON);
 // Creating backups of objects to fall back to for more accurate results
 const overTheHillObjOrig = JSON.parse(over_the_hill_JSON);
 const littlesObjOrig = JSON.parse(littles_JSON);
-
-// import person from './2023_fam.json' assert { type: 'json' };
-// console.log(person);
-
-fetch('./2023_fam.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
 
 // Set the copyright and year
 document.getElementById("currYear").innerHTML =  "Copyright © Willoughby " + cYear;
@@ -92,8 +90,7 @@ function runShuffle() {
     displayOverTheHillsShuffled(overTheHills);
     displayLittlesShuffled(lils);
     // Logging scores
-    console.log("*****************************************");
-    console.log("Number of reshuffles run in last shuffle: " + reshuffle);
+    console.log("Reshuffle Count: " + reshuffle);
 }
 
 function setHistory(obj) {
@@ -252,24 +249,17 @@ function displayLittlesShuffled(obj) {
 }
 
 /**
- * saveJSON
- * Saves 2 different files by running 2 functions
- */
-function saveJSON() {
-    save_over_the_hill_JSON();
-    save_littles_JSON();
-}
-
-/**
  * save_over_the_hill_JSON
  * Save New Over The Hill Shuffled List
  */
 function save_over_the_hill_JSON() {
     let newfamObj = JSON.stringify(overTheHillObj);
     let contentType = "json";
+    var file = new Blob([newfamObj], { type: contentType });
+    
     let title = (cYear + 1) + "_over_the_hill.json";
     var a = document.createElement("a");
-    var file = new Blob([newfamObj], { type: contentType });
+    
     a.href = URL.createObjectURL(file);
     a.download = title;
     a.click();
@@ -282,9 +272,11 @@ function save_over_the_hill_JSON() {
 function save_littles_JSON() {
     let newfamObj = JSON.stringify(littlesObj);
     let contentType = "json";
+    var file = new Blob([newfamObj], { type: contentType });
+
     let title = (cYear + 1) + "_littles.json";
     var a = document.createElement("a");
-    var file = new Blob([newfamObj], { type: contentType });
+
     a.href = URL.createObjectURL(file);
     a.download = title;
     a.click();

@@ -139,7 +139,7 @@ function linkOrNo(obj, i) {
             '<button class="btn-jolly-dead">' + obj.person[i].assigned + '\'s wishlist</a></button><br />';
     } else {
         result += obj.person[i].name + ' ➡ ' + obj.person[i].assigned + '<br />' +
-            '<button class="btn-jolly"><a href="' + getLink(obj, obj.person[i].assigned) +
+            '<button class="btn-jolly"><a style="color: black;" href="' + getLink(obj, obj.person[i].assigned) +
             '">' + obj.person[i].assigned + '\'s wishlist</a></button><br />';
     }
 

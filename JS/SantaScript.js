@@ -31,11 +31,11 @@ let over_the_hill_JSON = '{ "person":[' +
     ']}';
 
 let littles_JSON = '{ "person":[' +
-        '{"name":"Aidan","assigned":"Aria","ignore":["Imran","Erin","Jackie","Sam","Ayla","Aslan"],"history":"Henry","link":""},' +
+        '{"name":"Aidan","assigned":"Aria","ignore":["Imran","Erin","Jackie","Sam","Ayla","Aslan"],"history":"Henry","link":"https://www.amazon.com/hz/wishlist/dl/invite/d4ILntS?ref=cm_sw_sm_r_un_un_jEiHUZ2rlrJtY"},' +
         '{"name":"Ayla","assigned":"Henry","ignore":["Aidan","Imran","Erin","Jackie","Sam","Aslan"],"history":"Mikey","link":""},' +
         '{"name":"Aslan","assigned":"Izzy","ignore":["Aidan","Imran","Erin","Jackie","Sam","Ayla"],"history":"Cindy","link":""},' +
         '{"name":"Henry","assigned":"Aidan","ignore":["Annette","Melody","Jeff","Aria"],"history":"Izzy","link":"https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"},' +
-        '{"name":"Aria","assigned":"Ayla","ignore":["Annette","Melody","Jeff","Henry"],"history":"David","link":""},' +
+        '{"name":"Aria","assigned":"Ayla","ignore":["Annette","Melody","Jeff","Henry"],"history":"David","link":"https://www.amazon.com/hz/wishlist/ls/2IFD7ALJ45TJM?ref_=wl_share"},' +
         '{"name":"Izzy","assigned":"Aslan","ignore":["David","Morgan","Lilly","Brenda","Mikey"],"history":"Sam","link":""}' +
     ']}';
 

@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Automatically generate a list of names for the secret santa to keep it honest." />
     <meta name="author" content="Eric Willoughby" />
-    <meta property="og:image" content="./Assets/img/link_photo.jpg">
+    <meta property="og:image" content="./assets/img/link_photo.jpg">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
 
     <title>Secret Santa</title>
-    <link href="./Assets/img/favicon.ico" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="./CSS/styles.css" />
-    <link rel="stylesheet" href="./CSS/SantaStyle.css" />
-    <link rel="stylesheet" href="./CSS/tree.css" />
-    <link rel="stylesheet" href="./CSS/slideShow.css" />
+    <link href="./assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/SantaStyle.css" />
+    <link rel="stylesheet" href="./css/tree.css" />
+    <link rel="stylesheet" href="./css/slideShow.css" />
+    <link rel="stylesheet" href="./css/curtains.css" />
 
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -157,43 +158,43 @@
 
                         <div class="mySlides">
                             <div class="numbertext">1 / 7</div>
-                            <img src="./Assets/img/IMG_4.png" style="width:auto; height: 500px;">
+                            <img src="./assets/img/IMG_4.png" style="width:auto; height: 500px;">
                             <div class="text">Eric, Morgan, Erin & Imran</div>
                         </div>
 
                         <div class="mySlides">
                             <div class="numbertext">2 / 7</div>
-                            <img src="./Assets/img/IMG_5.png" style="width:auto; height: 500px;">
+                            <img src="./assets/img/IMG_5.png" style="width:auto; height: 500px;">
                             <div class="text">Lilly, Izzy, Ayla, Aslan & Aidan</div>
                         </div>
 
                         <div class="mySlides">
                             <div class="numbertext">3 / 7</div>
-                            <img src="./Assets/img/IMG_6.png" style="width:auto; height: 500px;">
+                            <img src="./assets/img/IMG_6.png" style="width:auto; height: 500px;">
                             <div class="text">Cousin Crew</div>
                         </div>
 
                         <div class="mySlides">
                             <div class="numbertext">4 / 7</div>
-                            <img src="./Assets/img/IMG_7.png" style="width:auto; height: 500px;">
+                            <img src="./assets/img/IMG_7.png" style="width:auto; height: 500px;">
                             <div class="text">Henry & Aria</div>
                         </div>
 
                         <div class="mySlides">
                             <div class="numbertext">5 / 7</div>
-                            <img src="./Assets/img/IMG_1.png" style="width:auto; height: 500px;">
+                            <img src="./assets/img/IMG_1.png" style="width:auto; height: 500px;">
                             <div class="text">Henry & Scout</div>
                         </div>
 
                         <div class="mySlides">
                             <div class="numbertext">6 / 7</div>
-                            <img src="./Assets/img/IMG_2.png" style="width:auto; height: 500px;">
+                            <img src="./assets/img/IMG_2.png" style="width:auto; height: 500px;">
                             <div class="text">Lilly & Baby Izzy</div>
                         </div>
 
                         <div class="mySlides">
                             <div class="numbertext">7 / 7</div>
-                            <img src="./Assets/img/IMG_3.png" style="width:auto; height: 500px;">
+                            <img src="./assets/img/IMG_3.png" style="width:auto; height: 500px;">
                             <div class="text">Ayla, Aslan & Aidan</div>
                         </div>
 
@@ -334,58 +335,76 @@
 
     <!-- Reshuffle Section -->
     <section class="page-section portfolio text-white" id="shuffleTime">
-        <div id="shuffle" class="container">
-            <button onclick="runShuffle()">Shuffle!</button>
-            <!-- whoGot Section Heading -->
-            <h2 class="page-section-heading text-holly text-center text-uppercase text-secondary mb-0">Who Got Who...
-                Now?!</h2>
-            <!-- Icon Divider -->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- whoGot Grid Items -->
-            <div class="row">
-                <!-- whoGot Item 1 -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" style="background-color:green;">
-                        <center>
-                            <h2 class="holly-column-title">Santa's Favorites</h2>
-                            <div class="divider-custom-line" style="color:white;"></div>
-                        </center>
-                        <center>
-                            <p id="column_0" class="holly-column-text"></p>
-                        </center>
+        <div id="shuffle">
+            <button onclick="playDrumroll(); runShuffle();">Re-Shuffle!</button>
+            <div class="curtain">
+                <div class="curtain__wrapper">
+                    <!-- <input id="curtain-check" type="checkbox" checked> -->
+
+                    <div id="curtain-L" class="curtain__panel curtain__panel--left">
+                        <img src="assets/img/curtain_L.png" style="width:100%; height: 100%;">
+                    </div> <!-- curtain__panel -->
+
+                    <div class="curtain__content">
+                        <!-- whoGot Section Heading -->
+                        <h2 class="page-section-heading text-holly text-center text-uppercase text-secondary mb-0">Who
+                            Got Who...
+                            Now?!</h2>
+                        <!-- Icon Divider -->
+                        <div class="divider-custom">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- whoGot Grid Items -->
+                        <div class="row">
+                            <!-- whoGot Item 1 -->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <div class="portfolio-item mx-auto" style="background-color:green;">
+                                    <center>
+                                        <h2 class="holly-column-title">Santa's Favorites</h2>
+                                        <div class="divider-custom-line" style="color:white;"></div>
+                                    </center>
+                                    <center>
+                                        <p id="column_0" class="holly-column-text"></p>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- whoGot Item 2 -->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <div class="portfolio-item mx-auto text-column" style="background-color:red;">
+                                    <center>
+                                        <h2 class="holly-column-title">Naughty List</h2>
+                                        <div class="divider-custom-line" style="color:white;"></div>
+                                    </center>
+                                    <center>
+                                        <p id="column_1" class="holly-column-text"></p>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- whoGot Item 3 -->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <div class="portfolio-item mx-auto text-column" style="background-color:green;">
+                                    <center>
+                                        <h2 class="holly-column-title">Littles</h2>
+                                        <div class="divider-custom-line" style="color:white;"></div>
+                                    </center>
+                                    <center>
+                                        <p id="column_2" class="holly-column-text"></p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <!-- whoGot Item 2 -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto text-column" style="background-color:red;">
-                        <center>
-                            <h2 class="holly-column-title">Naughty List</h2>
-                            <div class="divider-custom-line" style="color:white;"></div>
-                        </center>
-                        <center>
-                            <p id="column_1" class="holly-column-text"></p>
-                        </center>
-                    </div>
-                </div>
-                <!-- whoGot Item 3 -->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto text-column" style="background-color:green;">
-                        <center>
-                            <h2 class="holly-column-title">Littles</h2>
-                            <div class="divider-custom-line" style="color:white;"></div>
-                        </center>
-                        <center>
-                            <p id="column_2" class="holly-column-text"></p>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <button onclick="save_over_the_hill_JSON()">Save New Shuffle</button>
-            <button onclick="save_littles_JSON()">Save New Littles Shuffle</button>
+
+                    <div id="curtain-R" class="curtain__panel curtain__panel--right">
+                        <img src="assets/img/curtain_R.png" style="width:100%; height: 100%;">
+                    </div> <!-- curtain__panel -->
+                    <button onclick="save_over_the_hill_JSON()">Save New Shuffle</button>
+                    <button onclick="save_littles_JSON()">Save New Littles Shuffle</button>
+                </div> <!-- curtain__wrapper -->
+            </div> <!-- curtain -->
         </div>
     </section>
 
@@ -489,12 +508,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="./JS/scripts.js"></script>
-    <script src="./JS/SantaScript.js"></script>
-    <script src="./JS/Countdown.js"></script>
-    <script src="./JS/Audio.js"></script>
-    <script src="./JS/slideShow.js"></script>
-    <script type="text/javascript" src="./JS/Snowstorm.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/SantaScript.js"></script>
+    <script src="./js/Countdown.js"></script>
+    <script src="./js/Audio.js"></script>
+    <script src="./js/drumroll.js"></script>
+    <script src="./js/slideShow.js"></script>
+    <script type="text/javascript" src="./js/Snowstorm.js"></script>
     <script type="text/javascript">
         snowStorm.snowColor = '#99ccff'; // blue-ish snow!?
         snowStorm.flakesMaxActive = 96; // show more snow on screen at once

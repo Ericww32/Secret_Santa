@@ -86,6 +86,12 @@ function runShuffle() {
     // Assigning people... other people
     let overTheHills = assignSanta(overTheHillObj, overTheHillNames);
     let lils = assignSanta(littlesObj, littlesNames);
+    // Wait 5 seconds before displaying
+    setTimeout(() => {
+        console.log("Waited for 5 seconds");
+        // Play winning music
+        playWinner();
+    }, 4000);
     // Display output
     displayOverTheHillsShuffled(overTheHills);
     displayLittlesShuffled(lils);

@@ -1,5 +1,5 @@
 // Music to be used
-const music = new Audio('./assets/music/You\'re A Mean One, Mr. Grinch 2003.mp3');
+const music = new Audio('./Assets/music/You\'re A Mean One, Mr. Grinch 2003.mp3');
 // id for pause/play button
 const pButton = document.getElementById('pButton');
 

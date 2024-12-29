@@ -83,12 +83,12 @@ function runShuffle() {
     // Shuffling names
     shuffle(overTheHillNames);
     shuffle(littlesNames);
-    // Assigning people... other people
+    // Assigning people
     let overTheHills = assignSanta(overTheHillObj, overTheHillNames);
     let lils = assignSanta(littlesObj, littlesNames);
     // Wait 5 seconds before displaying
     setTimeout(() => {
-        console.log("Waited for 5 seconds");
+        console.log("Waited for 4 seconds");
         // Play winning music
         playWinner();
     }, 4000);

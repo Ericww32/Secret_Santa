@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Automatically generate a list of names for the secret santa to keep it honest." />
+    <meta name="author" content="Eric Willoughby" />
+    <meta property="og:image" content="./Assets/img/link_photo.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <title>Secret Santa</title>
+    <link href="./Assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/SantaStyle.css" />
+    <link rel="stylesheet" href="./CSS/curtains.css" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <div id="santa_header"></div>
+
+    <!-- Reshuffle Section -->
+    <section class="page-section text-white hide-fam-tree" id="reshuffle">
+        <div>
+            <br><br>
+            <button onclick="playDrumroll(); runShuffle();">Re-Shuffle!</button>
+            <div class="curtain">
+                <div class="curtain__wrapper">
+                    <!-- <input id="curtain-check" type="checkbox" checked> -->
+
+                    <div id="curtain-L" class="curtain__panel curtain__panel--left">
+                        <img src="./Assets/img/curtain_L.png" style="width:100%; height: 100%;">
+                    </div> <!-- curtain__panel -->
+
+                    <div class="curtain__content">
+                        <br><br>
+                        <!-- whoGot Section Heading -->
+                        <h2 class="page-section-heading text-holly text-center text-uppercase text-secondary mb-0">Who
+                            Got Who...
+                            Now?!</h2>
+                        <!-- Icon Divider -->
+                        <div class="divider-custom">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- whoGot Grid Items -->
+                        <div class="row">
+                            <!-- whoGot Item 1 -->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <div class="portfolio-item mx-auto" style="background-color:green;">
+                                    <center>
+                                        <h2 class="holly-column-title">Santa's Favorites</h2>
+                                        <div class="divider-custom-line" style="color:white;"></div>
+                                    </center>
+                                    <center>
+                                        <p id="column_0" class="holly-column-text"></p>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- whoGot Item 2 -->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <div class="portfolio-item mx-auto text-column" style="background-color:red;">
+                                    <center>
+                                        <h2 class="holly-column-title">Naughty List</h2>
+                                        <div class="divider-custom-line" style="color:white;"></div>
+                                    </center>
+                                    <center>
+                                        <p id="column_1" class="holly-column-text"></p>
+                                    </center>
+                                </div>
+                            </div>
+                            <!-- whoGot Item 3 -->
+                            <div class="col-md-6 col-lg-4 mb-5">
+                                <div class="portfolio-item mx-auto text-column" style="background-color:green;">
+                                    <center>
+                                        <h2 class="holly-column-title">Littles</h2>
+                                        <div class="divider-custom-line" style="color:white;"></div>
+                                    </center>
+                                    <center>
+                                        <p id="column_2" class="holly-column-text"></p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="curtain-R" class="curtain__panel curtain__panel--right">
+                        <img src="./Assets/img/curtain_R.png" style="width:100%; height: 100%;">
+                    </div> <!-- curtain__panel -->
+                    <button onclick="save_over_the_hill_JSON()">Save New Shuffle</button>
+                    <button onclick="save_littles_JSON()">Save New Littles Shuffle</button>
+                </div> <!-- curtain__wrapper -->
+            </div> <!-- curtain -->
+        </div>
+    </section>
+
+    <!-- Copyright Section -->
+    <div class="copyright py-4 text-center text-copyright">
+        <div id="currYear" class="container"></div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
+                class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="./JS/header.js"></script>
+    <script src="./JS/SantaScript.js"></script>
+    <script src="./JS/drumroll.js"></script>
+    <script type="text/javascript" src="./JS/Snowstorm.js"></script>
+    <script type="text/javascript">
+        snowStorm.snowColor = '#99ccff'; // blue-ish snow!?
+        snowStorm.flakesMaxActive = 96; // show more snow on screen at once
+        snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+    </script>
+</body>
+
+</html>

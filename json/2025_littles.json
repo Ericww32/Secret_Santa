@@ -2,7 +2,7 @@
     "person": [
         {
             "name": "Aidan",
-            "assigned": "Aria",
+            "assigned": "Izzy",
             "ignore": [
                 "Imran",
                 "Erin",
@@ -11,12 +11,12 @@
                 "Ayla",
                 "Aslan"
             ],
-            "history": "Henry",
-            "link": ""
+            "history": "Aria",
+            "link": "https://www.amazon.com/hz/wishlist/dl/invite/d4ILntS?ref=cm_sw_sm_r_un_un_jEiHUZ2rlrJtY"
         },
         {
             "name": "Ayla",
-            "assigned": "Henry",
+            "assigned": "Aria",
             "ignore": [
                 "Aidan",
                 "Imran",
@@ -25,12 +25,12 @@
                 "Sam",
                 "Aslan"
             ],
-            "history": "Mikey",
+            "history": "Henry",
             "link": ""
         },
         {
             "name": "Aslan",
-            "assigned": "Izzy",
+            "assigned": "Henry",
             "ignore": [
                 "Aidan",
                 "Imran",
@@ -39,36 +39,36 @@
                 "Sam",
                 "Ayla"
             ],
-            "history": "Cindy",
+            "history": "Izzy",
             "link": ""
         },
         {
             "name": "Henry",
-            "assigned": "Aidan",
+            "assigned": "Aslan",
             "ignore": [
                 "Annette",
                 "Melody",
                 "Jeff",
                 "Aria"
             ],
-            "history": "Izzy",
+            "history": "Aidan",
             "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"
         },
         {
             "name": "Aria",
-            "assigned": "Ayla",
+            "assigned": "Aidan",
             "ignore": [
                 "Annette",
                 "Melody",
                 "Jeff",
                 "Henry"
             ],
-            "history": "David",
-            "link": ""
+            "history": "Ayla",
+            "link": "https://www.amazon.com/hz/wishlist/ls/2IFD7ALJ45TJM?ref_=wl_share"
         },
         {
             "name": "Izzy",
-            "assigned": "Aslan",
+            "assigned": "Ayla",
             "ignore": [
                 "David",
                 "Morgan",
@@ -76,7 +76,7 @@
                 "Brenda",
                 "Mikey"
             ],
-            "history": "Sam",
+            "history": "Aslan",
             "link": ""
         }
     ]

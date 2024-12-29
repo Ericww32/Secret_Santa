@@ -1,6 +1,6 @@
 // Music to be used
-const drumroll = new Audio('./assets/music/Drum_Roll.mp3');
-const winner = new Audio('./assets/music/You_Win.mp3');
+const drumroll = new Audio('./Assets/music/Drum_Roll.mp3');
+const winner = new Audio('./Assets/music/You_Win.mp3');
 
 //Play and Pause
 function playDrumroll() {

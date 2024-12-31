@@ -342,12 +342,18 @@ let littles_JSON = {
 };
 
 // Creating parsed JSON objects
-let overTheHillObj = JSON.parse(over_the_hill_JSON);
-let littlesObj = JSON.parse(littles_JSON);
+// let overTheHillObj = JSON.parse(over_the_hill_JSON);
+// let littlesObj = JSON.parse(littles_JSON);
+
+let overTheHillObj = over_the_hill_JSON;
+let littlesObj = littles_JSON;
 
 // Creating backups of objects to fall back to for more accurate results
-const overTheHillObjOrig = JSON.parse(over_the_hill_JSON);
-const littlesObjOrig = JSON.parse(littles_JSON);
+// const overTheHillObjOrig = JSON.parse(over_the_hill_JSON);
+// const littlesObjOrig = JSON.parse(littles_JSON);
+
+const overTheHillObjOrig = over_the_hill_JSON;
+const littlesObjOrig = littles_JSON;
 
 // Set the copyright and year
 document.getElementById("currYear").innerHTML = "Copyright © Willoughby " + cYear;

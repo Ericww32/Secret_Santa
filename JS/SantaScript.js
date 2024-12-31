@@ -341,30 +341,20 @@ let littles_JSON = {
     ]
 };
 
-// Creating parsed JSON objects
-// let overTheHillObj = JSON.parse(over_the_hill_JSON);
-// let littlesObj = JSON.parse(littles_JSON);
-
-let overTheHillObj = over_the_hill_JSON;
-let littlesObj = littles_JSON;
-
 // Creating backups of objects to fall back to for more accurate results
-// const overTheHillObjOrig = JSON.parse(over_the_hill_JSON);
-// const littlesObjOrig = JSON.parse(littles_JSON);
-
-const overTheHillObjOrig = over_the_hill_JSON;
-const littlesObjOrig = littles_JSON;
+const over_the_hill_JSONOrig = over_the_hill_JSON;
+const littles_JSONOrig = littles_JSON;
 
 // Set the copyright and year
 document.getElementById("currYear").innerHTML = "Copyright © Willoughby " + cYear;
 
 // Create an array of names for each object
-let overTheHillNames = createArrayNames(overTheHillObj);
-let littlesNames = createArrayNames(littlesObj);
+let overTheHillNames = createArrayNames(over_the_hill_JSON);
+let littlesNames = createArrayNames(littles_JSON);
 
 // Display the data
-displayOverTheHills(overTheHillObj);
-displayLittles(littlesObj);
+displayOverTheHills(over_the_hill_JSON);
+displayLittles(littles_JSON);
 
 function createArrayNames(obj) {
     let result = [];
@@ -391,8 +381,8 @@ function runShuffle() {
     shuffle(overTheHillNames);
     shuffle(littlesNames);
     // Assigning people
-    let overTheHills = assignSanta(overTheHillObj, overTheHillNames);
-    let lils = assignSanta(littlesObj, littlesNames);
+    let overTheHills = assignSanta(over_the_hill_JSON, overTheHillNames);
+    let lils = assignSanta(littles_JSON, littlesNames);
     // Wait 5 seconds before displaying
     setTimeout(() => {
         console.log("Waited for 4 seconds");
@@ -566,7 +556,7 @@ function displayLittlesShuffled(obj) {
  * Save New Over The Hill Shuffled List
  */
 function save_over_the_hill_JSON() {
-    let newfamObj = JSON.stringify(overTheHillObj);
+    let newfamObj = JSON.stringify(over_the_hill_JSON);
     let contentType = "json";
     var file = new Blob([newfamObj], { type: contentType });
 
@@ -583,7 +573,7 @@ function save_over_the_hill_JSON() {
  * Save New Littles Shuffled List
  */
 function save_littles_JSON() {
-    let newfamObj = JSON.stringify(littlesObj);
+    let newfamObj = JSON.stringify(littles_JSON);
     let contentType = "json";
     var file = new Blob([newfamObj], { type: contentType });
 

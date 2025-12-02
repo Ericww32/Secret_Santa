@@ -75,7 +75,7 @@ let over_the_hill_JSON = {
                 "Mikey"
             ],
             "history": "Jackie",
-            "link": ""
+            "link": "https://www.amazon.com/hz/wishlist/ls/8YPVRU8AU63M?type=wishlist"
         },
         {
             "name": "Jackie",
@@ -110,6 +110,7 @@ let over_the_hill_JSON = {
             "assigned": "Cindy",
             "ignore": [
                 "Henry",
+                "Robert",
                 "Melody",
                 "Jeff",
                 "Eric",
@@ -117,6 +118,20 @@ let over_the_hill_JSON = {
             ],
             "history": "Erin",
             "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"
+        },
+        {
+            "name": "Robert",
+            "assigned": "Trystan",
+            "ignore": [
+                "Henry",
+                "Annette",
+                "Melody",
+                "Jeff",
+                "Eric",
+                "Aria"
+            ],
+            "history": "Trystan",
+            "link": ""
         },
         {
             "name": "Joe",
@@ -143,6 +158,7 @@ let over_the_hill_JSON = {
             "assigned": "Joe",
             "ignore": [
                 "Henry",
+                "Robert",
                 "Annette",
                 "Melody",
                 "Jeff",
@@ -184,6 +200,7 @@ let over_the_hill_JSON = {
             "assigned": "Mikayla",
             "ignore": [
                 "Henry",
+                "Robert",
                 "Annette",
                 "Melody",
                 "Eric",
@@ -197,6 +214,7 @@ let over_the_hill_JSON = {
             "assigned": "Imran",
             "ignore": [
                 "Henry",
+                "Robert",
                 "Annette",
                 "Jeff",
                 "Eric",
@@ -223,6 +241,7 @@ let over_the_hill_JSON = {
                 "Brenda",
                 "Lilly",
                 "Izzy",
+                "Trystan",
                 "Mikey"
             ],
             "history": "Sam",
@@ -236,16 +255,32 @@ let over_the_hill_JSON = {
                 "Morgan",
                 "Brenda",
                 "Izzy",
+                "Trystan",
                 "Mikey"
             ],
             "history": "Melody",
             "link": "https://www.amazon.com/registries/gl/guest-view/PK2YSMZEA27R"
         },
         {
+            "name": "Trystan",
+            "assigned": "Robert",
+            "ignore": [
+                "Lilly",
+                "Morgan",
+                "David",
+                "Brenda",
+                "Izzy",
+                "Mikey"
+            ],
+            "history": "",
+            "link": ""
+        },
+        {
             "name": "Mikey",
             "assigned": "Erin",
             "ignore": [
                 "David",
+                "Trystan",
                 "Morgan",
                 "Lilly",
                 "Izzy",

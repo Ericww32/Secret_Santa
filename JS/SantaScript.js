@@ -306,7 +306,7 @@ let littles_JSON = {
                 "Aslan"
             ],
             "history": "Aria",
-            "link": "https://www.amazon.com/hz/wishlist/dl/invite/d4ILntS?ref=cm_sw_sm_r_un_un_jEiHUZ2rlrJtY"
+            "link": "https://www.amazon.com/hz/wishlist/ls/1CSZFNNW942G8?ref=cm_sw_sm_r_un_un_U7DzFV0nopuBA"
         },
         {
             "name": "Ayla",
@@ -320,7 +320,7 @@ let littles_JSON = {
                 "Aslan"
             ],
             "history": "Henry",
-            "link": ""
+            "link": "https://www.amazon.com/registries/gl/guest-view/2Z62GSZWETSQ2?ref_=cm_sw_r_apin_ggr-subnav-share_509QZ09DV816KAHAFJBV&language=en-US"
         },
         {
             "name": "Aslan",

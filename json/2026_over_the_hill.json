@@ -1,0 +1,130 @@
+{
+    "person": [
+        {
+            "name": "Brenda",
+            "assigned": "Robert",
+            "ignore": ["David", "Morgan", "Lilly", "Izzy", "Mikey"],
+            "history": "Melody",
+            "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"
+        },
+        {
+            "name": "David",
+            "assigned": "Imran",
+            "ignore": ["Brenda", "Morgan", "Lilly", "Izzy", "Mikey"],
+            "history": "Jeff",
+            "link": "https://www.amazon.com/hz/wishlist/ls/8YPVRU8AU63M?type=wishlist"
+        },
+        {
+            "name": "Jackie",
+            "assigned": "Trystan",
+            "ignore": ["Sam", "Erin", "Imran", "Aidan", "Ayla", "Aslan"],
+            "history": "Mikey",
+            "link": "https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"
+        },
+        {
+            "name": "Sam",
+            "assigned": "Eric",
+            "ignore": ["Jackie", "Erin", "Imran", "Aidan", "Ayla", "Aslan"],
+            "history": "David",
+            "link": ""
+        },
+        {
+            "name": "Annette",
+            "assigned": "Sam",
+            "ignore": ["Henry", "Robert", "Melody", "Jeff", "Eric", "Aria"],
+            "history": "Cindy",
+            "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"
+        },
+        {
+            "name": "Robert",
+            "assigned": "Morgan",
+            "ignore": ["Henry", "Annette", "Melody", "Jeff", "Eric", "Aria"],
+            "history": "Trystan",
+            "link": ""
+        },
+        {
+            "name": "Joe",
+            "assigned": "Annette",
+            "ignore": ["Cindy", "Mikayla"],
+            "history": "Lilly",
+            "link": ""
+        },
+        {
+            "name": "Cindy",
+            "assigned": "Lilly",
+            "ignore": ["Joe", "Mikayla"],
+            "history": "Sam",
+            "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"
+        },
+        {
+            "name": "Eric",
+            "assigned": "David",
+            "ignore": ["Henry", "Robert", "Annette", "Melody", "Jeff", "Aria"],
+            "history": "Joe",
+            "link": "https://www.amazon.com/registries/gl/guest-view/3L2IRM8WFNWWA"
+        },
+        {
+            "name": "Erin",
+            "assigned": "Mikey",
+            "ignore": ["Imran", "Jackie", "Sam", "Aidan", "Ayla", "Aslan"],
+            "history": "Eric",
+            "link": "https://www.amazon.com/registries/gl/guest-view/39SGMJKKUOTKX"
+        },
+        {
+            "name": "Imran",
+            "assigned": "Melody",
+            "ignore": ["Erin", "Jackie", "Sam", "Aidan", "Ayla", "Aslan"],
+            "history": "Brenda",
+            "link": ""
+        },
+        {
+            "name": "Jeff",
+            "assigned": "Jackie",
+            "ignore": ["Henry", "Robert", "Annette", "Melody", "Eric", "Aria"],
+            "history": "Mikayla",
+            "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"
+        },
+        {
+            "name": "Melody",
+            "assigned": "Brenda",
+            "ignore": ["Henry", "Robert", "Annette", "Jeff", "Eric", "Aria"],
+            "history": "Imran",
+            "link": "https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"
+        },
+        {
+            "name": "Mikayla",
+            "assigned": "Jeff",
+            "ignore": ["Cindy", "Joe"],
+            "history": "Morgan",
+            "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"
+        },
+        {
+            "name": "Morgan",
+            "assigned": "Mikayla",
+            "ignore": ["David", "Brenda", "Lilly", "Izzy", "Trystan", "Mikey"],
+            "history": "Jackie",
+            "link": "https://www.amazon.com/hz/wishlist/ls/U52SDC73CKFW?ref_=wl_share"
+        },
+        {
+            "name": "Lilly",
+            "assigned": "Cindy",
+            "ignore": ["David", "Morgan", "Brenda", "Izzy", "Trystan", "Mikey"],
+            "history": "Annette",
+            "link": "https://www.amazon.com/registries/gl/guest-view/PK2YSMZEA27R"
+        },
+        {
+            "name": "Trystan",
+            "assigned": "Erin",
+            "ignore": ["Lilly", "Morgan", "David", "Brenda", "Izzy", "Mikey"],
+            "history": "Robert",
+            "link": ""
+        },
+        {
+            "name": "Mikey",
+            "assigned": "Joe",
+            "ignore": ["David", "Trystan", "Morgan", "Lilly", "Izzy", "Brenda"],
+            "history": "Erin",
+            "link": "https://www.amazon.com/hz/wishlist/ls/3Q58Z88ZHNE6Y?ref=cm_sw_sm_r_un_un_pLxxKqB5yIQir"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "person": [
+        {
+            "name": "Aidan",
+            "assigned": "Henry",
+            "ignore": ["Imran", "Erin", "Jackie", "Sam", "Ayla", "Aslan"],
+            "history": "Izzy",
+            "link": "https://www.amazon.com/hz/wishlist/ls/1CSZFNNW942G8?ref=cm_sw_sm_r_un_un_U7DzFV0nopuBA"
+        },
+        {
+            "name": "Ayla",
+            "assigned": "Izzy",
+            "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Aslan"],
+            "history": "Aria",
+            "link": "https://www.amazon.com/registries/gl/guest-view/2Z62GSZWETSQ2?ref_=cm_sw_r_apin_ggr-subnav-share_509QZ09DV816KAHAFJBV&language=en-US"
+        },
+        {
+            "name": "Aslan",
+            "assigned": "Aria",
+            "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Ayla"],
+            "history": "Henry",
+            "link": ""
+        },
+        {
+            "name": "Henry",
+            "assigned": "Ayla",
+            "ignore": ["Annette", "Melody", "Jeff", "Aria"],
+            "history": "Aslan",
+            "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"
+        },
+        {
+            "name": "Aria",
+            "assigned": "Aslan",
+            "ignore": ["Annette", "Melody", "Jeff", "Henry"],
+            "history": "Aidan",
+            "link": "https://www.amazon.com/hz/wishlist/ls/2IFD7ALJ45TJM?ref_=wl_share"
+        },
+        {
+            "name": "Izzy",
+            "assigned": "Aidan",
+            "ignore": ["David", "Morgan", "Lilly", "Brenda", "Mikey"],
+            "history": "Ayla",
+            "link": ""
+        }
+    ]
+}

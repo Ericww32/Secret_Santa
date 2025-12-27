@@ -651,3 +651,11 @@ var snowStorm = (function(window, document) {
   return this;
 
 }(window, document));
+
+
+// blue-ish snow!?
+snowStorm.snowColor = '#99ccff';
+// show more snow on screen at once
+snowStorm.flakesMaxActive = 96;
+// let the snow flicker in and out of view
+snowStorm.useTwinkleEffect = true;

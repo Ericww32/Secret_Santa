@@ -1,46 +1,44 @@
-let header_info = '<nav class="navbar navbar-expand-lg christmasHeader text-uppercase fixed-top" id="mainNav">\
-        <div class="container">\
-            <a class="navbar-brand js-scroll-trigger text-holly"\
-                href="https://ericww32.github.io/Secret_Santa/index.html#page-top">Not So Secret Santa!</a>\
-            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold holly rounded"\
-                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"\
-                aria-expanded="false" aria-label="Toggle navigation">\
-                Menu\
-                <i class="fas fa-bars"></i>\
-            </button>\
-            <div class="collapse navbar-collapse" id="navbarResponsive">\
-                <ul class="navbar-nav ml-auto">\
-                    <li class="nav-item mx-0 mx-lg-1 text-holly"><a\
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"\
-                            href="https://ericww32.github.io/Secret_Santa/index.html#whoGot">Who Got Who?</a>\
-                    </li>\
-                    <li class="nav-item mx-0 mx-lg-1 text-holly"><a\
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"\
-                            href="https://ericww32.github.io/Secret_Santa/gallary.html#slideshow">Slideshow</a>\
-                    </li>\
-                    <li class="nav-item mx-0 mx-lg-1 text-holly"><a\
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger hide-fam-tree"\
-                            href="https://ericww32.github.io/Secret_Santa/index.html#famTree">Fam-Tree</a></li>\
-                    <li class="nav-item mx-0 mx-lg-1 text-holly hide-fam-tree"><a\
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"\
-                            href="https://ericww32.github.io/Secret_Santa/index.html#reshuffle">Reshuffle</a>\
-                    </li>\
-                    <li class="nav-item mx-0 mx-lg-1 text-holly"><a\
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"\
-                            href="https://ericww32.github.io/Secret_Santa/info.html#about">About</a></li>\
-                    <li class="nav-item mx-0 mx-lg-1 text-holly"><a\
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"\
-                            href="https://ericww32.github.io/Secret_Santa/info.html#notes">Note</a></li>\
-                    <li class="nav-item mx-0 mx-lg-1 text-holly"><a\
-                            class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"\
-                            href="https://ericww32.github.io/Secret_Santa/info.html#rules">Rules</a></li>\
-                </ul>\
-            </div>\
-        </div>\
-    </nav>';
+let header_info = `
+                <nav class="navbar navbar-expand-lg christmasHeader text-uppercase fixed-top" id="mainNav">
+                        <div class="container">
+                                <a class="navbar-brand js-scroll-trigger text-holly"
+                                href="index.html#page-top">Not So Secret Santa!</a>
+                                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold holly rounded" type="button"
+                                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                Menu
+                                <i class="fas fa-bars"></i>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarResponsive">
+                                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item mx-0 mx-lg-1 text-holly">
+                                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                href="index.html#whoGot">Who Got Who?</a>
+                                        </li>
+                                        <li class="nav-item mx-0 mx-lg-1 text-holly">
+                                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                href="gallary.html">Gallery</a>
+                                        </li>
+                                        <!-- <li class="nav-item mx-0 mx-lg-1 text-holly">
+                                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger hide-fam-tree"
+                                                href="family_tree.html">Fam-Tree</a>
+                                        </li> -->
+                                        <li class="nav-item mx-0 mx-lg-1 text-holly hide-fam-tree">
+                                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                href="reshuffle.html">Reshuffle</a>
+                                        </li>
+                                        <li class="nav-item mx-0 mx-lg-1 text-holly">
+                                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                                                href="info.html">Info</a>
+                                        </li>
+                                </ul>
+                                </div>
+                        </div>
+                </nav>
+                `;
 
 window.onload = function header_loader() {
-        document.getElementById('santa_header').innerHTML = header_info;
+        document.getElementById('header-container').innerHTML = header_info;
 
         (function ($) {
                 "use strict"; // Start of use strict

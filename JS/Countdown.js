@@ -5,6 +5,13 @@ let x = setInterval(function () {
   let countDownDate = new Date("Dec 25, " + cYear + " 00:00:00").getTime();
   // Get today's date and time
   let now = new Date().getTime();
+  let newYears = new Date("Dec 31, " + cYear + " 12:00:00").getTime();
+
+  // For that week between Christmas and the new year
+  if (countDownDate < now && now < newYears) {
+    countDownDate = new Date("Dec 25, " + (cYear + 1) + " 00:00:00").getTime();
+  }
+
   // Find the distance between now and the count down date
   let distance = countDownDate - now;
   // Time calculations for days, hours, minutes and seconds

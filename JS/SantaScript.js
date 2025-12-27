@@ -10,283 +10,133 @@ let cYear = currentDate.getFullYear();
  */
 let reshuffle = 0;
 
-// ************************************************************************************
-// THIS IS AN EXAMPLE OF HOW TO FETCH.
-// GITHUB PAGES BLOCKS THIS, BUT EVENTUALLY I WANT TO PULL FROM A DB ON MY OWN SERVER.
-// LEAVING THIS HERE FOR NOW. DO NOT REMOVE. LEAVE COMMENTED OUT.
-// ************************************************************************************
-// let temp_year = cYear
-
-// if (cMonth == 12) {
-//     if (cDay == 26 || cDay == 27 || cDay == 28 || cDay == 29 || cDay == 30 || cDay == 31) {
-//         temp_year = cYear + 1
-//     }
-// }
-
-// let littles_path = "./json/" + temp_year + "_littles.json";
-// let over_the_hill_path = "./json/" + temp_year + "_over_the_hill.json";
-
-// function fetchJSONData(json_to_find) {
-//     console.log("Looking for JSON in: " + json_to_find);
-
-//     fetch(json_to_find)
-//         .then((res) => {
-//             if (!res.ok) {
-//                 throw new Error
-//                     (`HTTP error! Status: ${res.status}`);
-//             }
-//             return res.json();
-//         })
-//         .then((data) =>
-//             console.log(data))
-//         .catch((error) =>
-//             console.error("Unable to fetch data:", error));
-// }
-
-// let over_the_hill_JSON = fetchJSONData(littles_path);
-// let littles_JSON = fetchJSONData(over_the_hill_path);
-
-// ************************************************************************************
-
 // JSON varaibles
 let over_the_hill_JSON = {
     "person": [
         {
             "name": "Brenda",
-            "assigned": "Melody",
-            "ignore": [
-                "David",
-                "Morgan",
-                "Lilly",
-                "Izzy",
-                "Mikey"
-            ],
-            "history": "Mikayla",
+            "assigned": "Robert",
+            "ignore": ["David", "Morgan", "Lilly", "Izzy", "Mikey"],
+            "history": "Melody",
             "link": "https://www.amazon.com/hz/wishlist/ls/2KVZA4434Y4LT"
         },
         {
             "name": "David",
-            "assigned": "Jeff",
-            "ignore": [
-                "Brenda",
-                "Morgan",
-                "Lilly",
-                "Izzy",
-                "Mikey"
-            ],
-            "history": "Jackie",
+            "assigned": "Imran",
+            "ignore": ["Brenda", "Morgan", "Lilly", "Izzy", "Mikey"],
+            "history": "Jeff",
             "link": "https://www.amazon.com/hz/wishlist/ls/8YPVRU8AU63M?type=wishlist"
         },
         {
             "name": "Jackie",
-            "assigned": "Mikey",
-            "ignore": [
-                "Sam",
-                "Erin",
-                "Imran",
-                "Aidan",
-                "Ayla",
-                "Aslan"
-            ],
-            "history": "Cindy",
+            "assigned": "Trystan",
+            "ignore": ["Sam", "Erin", "Imran", "Aidan", "Ayla", "Aslan"],
+            "history": "Mikey",
             "link": "https://www.amazon.com/hz/wishlist/ls/36UDARP2M10ZQ?ref_=wl_share"
         },
         {
             "name": "Sam",
-            "assigned": "David",
-            "ignore": [
-                "Jackie",
-                "Erin",
-                "Imran",
-                "Aidan",
-                "Ayla",
-                "Aslan"
-            ],
-            "history": "Joe",
+            "assigned": "Eric",
+            "ignore": ["Jackie", "Erin", "Imran", "Aidan", "Ayla", "Aslan"],
+            "history": "David",
             "link": ""
         },
         {
             "name": "Annette",
-            "assigned": "Cindy",
-            "ignore": [
-                "Henry",
-                "Robert",
-                "Melody",
-                "Jeff",
-                "Eric",
-                "Aria"
-            ],
-            "history": "Erin",
+            "assigned": "Sam",
+            "ignore": ["Henry", "Robert", "Melody", "Jeff", "Eric", "Aria"],
+            "history": "Cindy",
             "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"
         },
         {
             "name": "Robert",
-            "assigned": "Trystan",
-            "ignore": [
-                "Henry",
-                "Annette",
-                "Melody",
-                "Jeff",
-                "Eric",
-                "Aria"
-            ],
+            "assigned": "Morgan",
+            "ignore": ["Henry", "Annette", "Melody", "Jeff", "Eric", "Aria"],
             "history": "Trystan",
             "link": ""
         },
         {
             "name": "Joe",
-            "assigned": "Lilly",
-            "ignore": [
-                "Cindy",
-                "Mikayla"
-            ],
-            "history": "Eric",
-            "link": ""
-        },
-        {
-            "name": "Cindy",
-            "assigned": "Sam",
-            "ignore": [
-                "Joe",
-                "Mikayla"
-            ],
-            "history": "Morgan",
-            "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"
-        },
-        {
-            "name": "Eric",
-            "assigned": "Joe",
-            "ignore": [
-                "Henry",
-                "Robert",
-                "Annette",
-                "Melody",
-                "Jeff",
-                "Aria"
-            ],
-            "history": "David",
-            "link": "https://www.amazon.com/registries/gl/guest-view/3L2IRM8WFNWWA"
-        },
-        {
-            "name": "Erin",
-            "assigned": "Eric",
-            "ignore": [
-                "Imran",
-                "Jackie",
-                "Sam",
-                "Aidan",
-                "Ayla",
-                "Aslan"
-            ],
-            "history": "Jeff",
-            "link": "https://www.amazon.com/registries/gl/guest-view/39SGMJKKUOTKX"
-        },
-        {
-            "name": "Imran",
-            "assigned": "Brenda",
-            "ignore": [
-                "Erin",
-                "Jackie",
-                "Sam",
-                "Aidan",
-                "Ayla",
-                "Aslan"
-            ],
+            "assigned": "Annette",
+            "ignore": ["Cindy", "Mikayla"],
             "history": "Lilly",
             "link": ""
         },
         {
+            "name": "Cindy",
+            "assigned": "Lilly",
+            "ignore": ["Joe", "Mikayla"],
+            "history": "Sam",
+            "link": "https://www.amazon.com/hz/wishlist/ls/45542NYYP0KO?ref_=wl_share"
+        },
+        {
+            "name": "Eric",
+            "assigned": "David",
+            "ignore": ["Henry", "Robert", "Annette", "Melody", "Jeff", "Aria"],
+            "history": "Joe",
+            "link": "https://www.amazon.com/registries/gl/guest-view/3L2IRM8WFNWWA"
+        },
+        {
+            "name": "Erin",
+            "assigned": "Mikey",
+            "ignore": ["Imran", "Jackie", "Sam", "Aidan", "Ayla", "Aslan"],
+            "history": "Eric",
+            "link": "https://www.amazon.com/registries/gl/guest-view/39SGMJKKUOTKX"
+        },
+        {
+            "name": "Imran",
+            "assigned": "Melody",
+            "ignore": ["Erin", "Jackie", "Sam", "Aidan", "Ayla", "Aslan"],
+            "history": "Brenda",
+            "link": ""
+        },
+        {
             "name": "Jeff",
-            "assigned": "Mikayla",
-            "ignore": [
-                "Henry",
-                "Robert",
-                "Annette",
-                "Melody",
-                "Eric",
-                "Aria"
-            ],
-            "history": "Mikey",
+            "assigned": "Jackie",
+            "ignore": ["Henry", "Robert", "Annette", "Melody", "Eric", "Aria"],
+            "history": "Mikayla",
             "link": "https://www.amazon.com/hz/wishlist/ls/2BI9NMK0ZTYX3?ref_=wl_share"
         },
         {
             "name": "Melody",
-            "assigned": "Imran",
-            "ignore": [
-                "Henry",
-                "Robert",
-                "Annette",
-                "Jeff",
-                "Eric",
-                "Aria"
-            ],
-            "history": "Brenda",
+            "assigned": "Brenda",
+            "ignore": ["Henry", "Robert", "Annette", "Jeff", "Eric", "Aria"],
+            "history": "Imran",
             "link": "https://www.amazon.com/hz/wishlist/ls/RJX3PDJ6XB8S?ref_=wl_share"
         },
         {
             "name": "Mikayla",
-            "assigned": "Morgan",
-            "ignore": [
-                "Cindy",
-                "Joe"
-            ],
-            "history": "Annette",
+            "assigned": "Jeff",
+            "ignore": ["Cindy", "Joe"],
+            "history": "Morgan",
             "link": "https://www.amazon.com/hz/wishlist/ls/2GJV6MB1EZB9Z?ref_=wl_share"
         },
         {
             "name": "Morgan",
-            "assigned": "Jackie",
-            "ignore": [
-                "David",
-                "Brenda",
-                "Lilly",
-                "Izzy",
-                "Trystan",
-                "Mikey"
-            ],
-            "history": "Sam",
+            "assigned": "Mikayla",
+            "ignore": ["David", "Brenda", "Lilly", "Izzy", "Trystan", "Mikey"],
+            "history": "Jackie",
             "link": "https://www.amazon.com/hz/wishlist/ls/U52SDC73CKFW?ref_=wl_share"
         },
         {
             "name": "Lilly",
-            "assigned": "Annette",
-            "ignore": [
-                "David",
-                "Morgan",
-                "Brenda",
-                "Izzy",
-                "Trystan",
-                "Mikey"
-            ],
-            "history": "Melody",
+            "assigned": "Cindy",
+            "ignore": ["David", "Morgan", "Brenda", "Izzy", "Trystan", "Mikey"],
+            "history": "Annette",
             "link": "https://www.amazon.com/registries/gl/guest-view/PK2YSMZEA27R"
         },
         {
             "name": "Trystan",
-            "assigned": "Robert",
-            "ignore": [
-                "Lilly",
-                "Morgan",
-                "David",
-                "Brenda",
-                "Izzy",
-                "Mikey"
-            ],
-            "history": "",
+            "assigned": "Erin",
+            "ignore": ["Lilly", "Morgan", "David", "Brenda", "Izzy", "Mikey"],
+            "history": "Robert",
             "link": ""
         },
         {
             "name": "Mikey",
-            "assigned": "Erin",
-            "ignore": [
-                "David",
-                "Trystan",
-                "Morgan",
-                "Lilly",
-                "Izzy",
-                "Brenda"
-            ],
-            "history": "Imran",
+            "assigned": "Joe",
+            "ignore": ["David", "Trystan", "Morgan", "Lilly", "Izzy", "Brenda"],
+            "history": "Erin",
             "link": "https://www.amazon.com/hz/wishlist/ls/3Q58Z88ZHNE6Y?ref=cm_sw_sm_r_un_un_pLxxKqB5yIQir"
         }
     ]
@@ -296,81 +146,44 @@ let littles_JSON = {
     "person": [
         {
             "name": "Aidan",
-            "assigned": "Izzy",
-            "ignore": [
-                "Imran",
-                "Erin",
-                "Jackie",
-                "Sam",
-                "Ayla",
-                "Aslan"
-            ],
-            "history": "Aria",
+            "assigned": "Henry",
+            "ignore": ["Imran", "Erin", "Jackie", "Sam", "Ayla", "Aslan"],
+            "history": "Izzy",
             "link": "https://www.amazon.com/hz/wishlist/ls/1CSZFNNW942G8?ref=cm_sw_sm_r_un_un_U7DzFV0nopuBA"
         },
         {
             "name": "Ayla",
-            "assigned": "Aria",
-            "ignore": [
-                "Aidan",
-                "Imran",
-                "Erin",
-                "Jackie",
-                "Sam",
-                "Aslan"
-            ],
-            "history": "Henry",
+            "assigned": "Izzy",
+            "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Aslan"],
+            "history": "Aria",
             "link": "https://www.amazon.com/registries/gl/guest-view/2Z62GSZWETSQ2?ref_=cm_sw_r_apin_ggr-subnav-share_509QZ09DV816KAHAFJBV&language=en-US"
         },
         {
             "name": "Aslan",
-            "assigned": "Henry",
-            "ignore": [
-                "Aidan",
-                "Imran",
-                "Erin",
-                "Jackie",
-                "Sam",
-                "Ayla"
-            ],
-            "history": "Izzy",
+            "assigned": "Aria",
+            "ignore": ["Aidan", "Imran", "Erin", "Jackie", "Sam", "Ayla"],
+            "history": "Henry",
             "link": ""
         },
         {
             "name": "Henry",
-            "assigned": "Aslan",
-            "ignore": [
-                "Annette",
-                "Melody",
-                "Jeff",
-                "Aria"
-            ],
-            "history": "Aidan",
+            "assigned": "Ayla",
+            "ignore": ["Annette", "Melody", "Jeff", "Aria"],
+            "history": "Aslan",
             "link": "https://www.amazon.com/hz/wishlist/ls/EYCB04U0H7MY/ref=nav_wishlist_lists_3?_encoding=UTF8&type=wishlist"
         },
         {
             "name": "Aria",
-            "assigned": "Aidan",
-            "ignore": [
-                "Annette",
-                "Melody",
-                "Jeff",
-                "Henry"
-            ],
-            "history": "Ayla",
+            "assigned": "Aslan",
+            "ignore": ["Annette", "Melody", "Jeff", "Henry"],
+            "history": "Aidan",
             "link": "https://www.amazon.com/hz/wishlist/ls/2IFD7ALJ45TJM?ref_=wl_share"
         },
         {
             "name": "Izzy",
-            "assigned": "Ayla",
-            "ignore": [
-                "David",
-                "Morgan",
-                "Lilly",
-                "Brenda",
-                "Mikey"
-            ],
-            "history": "Aslan",
+            "assigned": "Aidan",
+            "ignore": ["David", "Morgan", "Lilly", "Brenda", "Mikey"],
+            "history": "Ayla",
             "link": ""
         }
     ]
@@ -514,7 +327,7 @@ function displayOverTheHills(obj) {
     let col_1 = "<ul>";
 
     for (let i = 0; i < obj.person.length; i++) {
-        if (i >= 8) {
+        if (i >= 9) {
             col_1 += linkOrNo(obj, i);
         } else {
             col_0 += linkOrNo(obj, i);
@@ -555,7 +368,7 @@ function displayOverTheHillsShuffled(obj) {
     let col_1 = "<ul>";
 
     for (let i = 0; i < obj.person.length; i++) {
-        if (i >= 8) {
+        if (i >= 10) {
             col_1 += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";
         } else {
             col_0 += obj.person[i].name + " now gets " + obj.person[i].assigned + "<br />*******<br />";

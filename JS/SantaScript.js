@@ -46,7 +46,7 @@ let over_the_hill_JSON = {
             "assigned": "Sam",
             "ignore": ["Henry", "Robert", "Melody", "Jeff", "Eric", "Aria"],
             "history": "Cindy",
-            "link": "https://www.amazon.com/hz/wishlist/ls/3PUOS221DGMJU?ref=cm_sw_sm_r_wl_ip_PLh48gOkiQzUJ"
+            "link": "https://www.amazon.com/registries/gl/guest-view/2EQLX3BJERLIR?ref_=cm_sw_r_apin_ggr-subnav-share_YC4J75WQE3TZRYP1HA70_1&language=en-US"
         },
         {
             "name": "Robert",
